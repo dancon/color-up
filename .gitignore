@@ -10,6 +10,11 @@ captures/
 *.keystore
 artifacts/
 
+# Local drafts and temporary outputs
+draft_*_folder/
+*.tmp
+/artwork/.candidate-*/
+
 # Local artwork and skill tooling environments
 .venv*/
 __pycache__/
