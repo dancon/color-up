@@ -49,8 +49,9 @@ The canonical QA scripts and pinned dependencies live with that skill; project t
 - Fixed UI width40/1000. Keep deterministic two-layer paper grain and gradient/glitter in shared
   UI/thumbnail/coverage/PNG rendering. Mutable ShaderBrush caches belong to each drawing thread.
 - Coverage uses actual pigment at160×160, excluding foreground masks; any RGB channel<250 counts.
-  >=55% completes a region; page progress is the mean. All regions first complete -> celebration;
-  >=6 used colors gives3 stars, >=3 gives2. Eraser adds no color; history survives clear/erasing.
+  >=55% completes a region; page progress is the mean. All regions first complete -> celebration.
+  Preserve internal color statistics, but celebration must not rank creative work by color count.
+  Eraser adds no color; history survives clear/erasing.
 - Clear is one undoable action; latest100 undo steps,300 strokes/page,1024 points/stroke. Commit
   measurements stay ordered; live measurements at most once/120ms and one pending. Stale commits
   can add history but cannot regress displayed current progress. Export settles active strokes first.
@@ -64,8 +65,13 @@ The canonical QA scripts and pinned dependencies live with that skill; project t
 
 ## UI and verification
 
-Centered square on lavender, compact six-tool/title group14dp above, bottom tray, outside hint
-(9s/first stroke). Parent tips on every screen, controls>=48dp, portrait hint and responsive windows.
+Square paper on lavender, six icon-only tools/title group14dp above, bottom tray. No painting-page
+brand text or visible text on tool buttons. Keep the current-color swatch/name visible above crayons;
+instructions must not replace it. Adapt to both tablet
+orientations and narrow windows without covering paper; retain drawing/selection on rotation.
+Only show first-use guidance outside paper when it fits; retain until accepted and keep help recallable. Confirm clear, then keep
+its one-step undo. Gallery theme and collection filters compose; <=10 regions is an easy-discovery
+shortcut, not an age assessment. Parent tips on every screen, controls>=48dp.
 Hide system bars only while painting. No background sound. No network permission/ads/accounts/
 analytics/IAP/storage permission; use system picker for export. Preserve authorized brand/audio.
 

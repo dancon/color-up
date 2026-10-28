@@ -3,6 +3,10 @@ package com.colorup.app.ui
 import android.animation.ValueAnimator
 import android.graphics.BitmapFactory
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -69,6 +73,7 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke as DrawStroke
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -88,16 +93,18 @@ import com.colorup.app.ColoringUiState
 import com.colorup.app.GameScreen
 import com.colorup.core.Crayon
 import com.colorup.core.CrayonPalette
+import com.colorup.core.ArtworkCollection
+import com.colorup.core.ArtworkDiscovery
 import com.colorup.core.LineArt
 import com.colorup.core.Point
 import com.colorup.core.PageProgress
 import com.colorup.core.Stroke
 import com.colorup.core.Tool
-import kotlinx.coroutines.delay
 
 private val Cream = Color(0xFFFFF8EC)
 private val Paper = Color(0xFFFFFDF8)
 private val Ink = Color(0xFF3D3A45)
+private val ToolInk = Color(0xFF251B31)
 private val Muted = Color(0xFF726C7C)
 private val Coral = Color(0xFFFF5C5C)
 private val Lemon = Color(0xFFFFD93D)
@@ -128,6 +135,7 @@ fun ColorUpScreen(
 ) {
     var showParents by remember { mutableStateOf(false) }
     var galleryTheme by rememberSaveable { mutableStateOf("all") }
+    var galleryCollection by rememberSaveable { mutableStateOf(ArtworkCollection.ALL) }
     Box(Modifier.fillMaxSize().testTag("screen_${state.screen.name.lowercase()}")) {
         if (state.screen == GameScreen.PAINT) PaintSceneBackground() else BrandBackground()
         val painting = state.screen == GameScreen.PAINT
@@ -135,10 +143,17 @@ fun ColorUpScreen(
             Column(Modifier.widthIn(max = if (painting) 1600.dp else 1120.dp).fillMaxWidth().fillMaxHeight()) {
                 when (state.screen) {
                     GameScreen.HOME -> HomeScreen(state, onPageSelected, { screen ->
-                        if (screen == GameScreen.GALLERY) galleryTheme = "all"
+                        if (screen == GameScreen.GALLERY) {
+                            galleryTheme = "all"
+                            galleryCollection = ArtworkCollection.ALL
+                        }
                         onNavigate(screen)
                     }) { showParents = true }
-                    GameScreen.GALLERY -> GalleryScreen(state, onPageSelected, onNavigate, galleryTheme, { galleryTheme = it }) { showParents = true }
+                    GameScreen.GALLERY -> GalleryScreen(
+                        state, onPageSelected, onNavigate, galleryTheme, { galleryTheme = it },
+                        galleryCollection, { galleryCollection = it },
+                        { galleryTheme = "all"; galleryCollection = ArtworkCollection.ALL },
+                    ) { showParents = true }
                     GameScreen.PAINT -> PaintScreen(
                         state, onNavigate, onCrayonSelected, onToolSelected,
                         onUndo, onClear, onExport, onSoundToggle, onPalettePageChange,
@@ -261,15 +276,21 @@ private fun HeroCopy(state: ColoringUiState, onNavigate: (GameScreen) -> Unit, m
             Text("涂个彩。", color = Coral, fontSize = 25.sp, fontWeight = FontWeight.Black)
         }
         Text("挑一张线稿，选一支蜡笔，按住画板慢慢涂。\n颜色只会留在这一笔开始的区域里，怎么涂都不出界。", color = Muted, fontSize = 14.sp, lineHeight = 25.sp)
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            InkButton("▱  开始涂色", { onNavigate(GameScreen.GALLERY) }, background = Lemon, modifier = Modifier.testTag("start_coloring"))
-            if (state.hasVisitedPage) {
-                InkButton("继续上次 · ${state.page.title} →", { onNavigate(GameScreen.PAINT) }, modifier = Modifier.testTag("continue_coloring"))
-            }
-        }
-        Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            listOf("Android 平板", "${state.pages.size} 张原创创意线稿", "${CrayonPalette.colors.size} 支蜡笔", "怎么涂都不出界").forEach {
-                Text(it, Modifier.border(1.dp, Ink.copy(alpha = .18f), CircleShape).padding(horizontal = 10.dp, vertical = 6.dp), color = Muted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+        BoxWithConstraints(Modifier.fillMaxWidth()) {
+            if (maxWidth >= 520.dp) {
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    InkButton("▱  开始涂色", { onNavigate(GameScreen.GALLERY) }, background = Lemon, modifier = Modifier.testTag("start_coloring"))
+                    if (state.hasVisitedPage) {
+                        InkButton("继续上次 · ${state.page.title} →", { onNavigate(GameScreen.PAINT) }, modifier = Modifier.weight(1f).testTag("continue_coloring"))
+                    }
+                }
+            } else {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    InkButton("▱  开始涂色", { onNavigate(GameScreen.GALLERY) }, background = Lemon, modifier = Modifier.fillMaxWidth().testTag("start_coloring"))
+                    if (state.hasVisitedPage) {
+                        InkButton("继续上次 · ${state.page.title} →", { onNavigate(GameScreen.PAINT) }, modifier = Modifier.fillMaxWidth().testTag("continue_coloring"))
+                    }
+                }
             }
         }
     }
@@ -277,7 +298,19 @@ private fun HeroCopy(state: ColoringUiState, onNavigate: (GameScreen) -> Unit, m
 
 @Composable
 private fun MascotHero(modifier: Modifier) {
-    Box(modifier, contentAlignment = Alignment.Center) {
+    val motion = if (ValueAnimator.areAnimatorsEnabled()) {
+        val transition = rememberInfiniteTransition(label = "bobo_greeting")
+        val float by transition.animateFloat(-4f, 4f, infiniteRepeatable(tween(2800), RepeatMode.Reverse), label = "bobo_float")
+        val tilt by transition.animateFloat(-1.5f, 1.5f, infiniteRepeatable(tween(3300), RepeatMode.Reverse), label = "bobo_tilt")
+        val breath by transition.animateFloat(.99f, 1.015f, infiniteRepeatable(tween(2100), RepeatMode.Reverse), label = "bobo_breath")
+        Modifier.graphicsLayer {
+            translationY = float.dp.toPx()
+            rotationZ = tilt
+            scaleX = breath
+            scaleY = breath
+        }
+    } else Modifier
+    Box(modifier.testTag("mascot_hero"), contentAlignment = Alignment.Center) {
         Canvas(Modifier.fillMaxSize()) {
             val radius = minOf(size.width, size.height) * .43f
             drawCircle(Brush.radialGradient(listOf(Color(0xFFFFF2C5), Color(0xFFFFDF8A)), radius = radius), radius)
@@ -289,7 +322,7 @@ private fun MascotHero(modifier: Modifier) {
                 drawCircle(Ink, 6.dp.toPx(), center, style = DrawStroke(2.dp.toPx()))
             }
         }
-        Bobo(Modifier.fillMaxHeight(.72f).aspectRatio(1f))
+        Bobo(Modifier.fillMaxHeight(.72f).aspectRatio(1f).then(motion).testTag("bobo_mascot"))
         Box(Modifier.align(Alignment.TopEnd).padding(12.dp).background(Paper, RoundedCornerShape(16.dp)).border(3.dp, Ink, RoundedCornerShape(16.dp)).padding(horizontal = 14.dp, vertical = 8.dp)) {
             Text("啵！", color = Coral, fontWeight = FontWeight.Black, fontSize = 20.sp)
         }
@@ -303,16 +336,23 @@ private fun GalleryScreen(
     onNavigate: (GameScreen) -> Unit,
     selectedTheme: String,
     onThemeSelected: (String) -> Unit,
+    selectedCollection: ArtworkCollection,
+    onCollectionSelected: (ArtworkCollection) -> Unit,
+    onResetFilters: () -> Unit,
     onParents: () -> Unit,
 ) {
     val themes = remember(state.pages) {
         listOf("all" to "全部") + state.pages.distinctBy { it.theme }.map { it.theme to it.themeLabel }
     }
-    val visiblePages = remember(state.pages, selectedTheme) {
-        state.pages.filter { selectedTheme == "all" || it.theme == selectedTheme }
+    val theme = selectedTheme.takeUnless { it == "all" }
+    val visiblePages = remember(state.pages, state.drawings, state.completedPages, theme, selectedCollection) {
+        ArtworkDiscovery.select(state.pages, state.drawings, state.completedPages, theme, selectedCollection)
+    }
+    val collectionCounts = remember(state.pages, state.drawings, state.completedPages, theme) {
+        ArtworkDiscovery.counts(state.pages, state.drawings, state.completedPages, theme)
     }
     val gridState = rememberLazyGridState()
-    LaunchedEffect(selectedTheme) { gridState.scrollToItem(0) }
+    LaunchedEffect(selectedTheme, selectedCollection) { gridState.scrollToItem(0) }
     BoxWithConstraints(Modifier.fillMaxSize()) {
         val columns = if (maxWidth >= 900.dp) 4 else 2
         LazyVerticalGrid(
@@ -324,7 +364,7 @@ private fun GalleryScreen(
                 Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
                     BrandHeader({ onNavigate(GameScreen.HOME) }, onParents)
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                        InkButton("‹", { onNavigate(GameScreen.HOME) }, Modifier.width(52.dp).testTag("gallery_back"))
+                        InkBackButton({ onNavigate(GameScreen.HOME) }, Modifier.testTag("gallery_back"))
                         Column {
                             Text("选一张来涂", color = Ink, fontWeight = FontWeight.Black, fontSize = 32.sp)
                             Text("${state.pages.size} 张原创创意线稿 · ${themes.size - 1} 个主题系列 · ${CrayonPalette.colors.size} 支蜡笔", color = Muted, fontSize = 13.sp)
@@ -333,7 +373,8 @@ private fun GalleryScreen(
                     Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(9.dp)) {
                         themes.forEach { (theme, label) ->
                             val selected = selectedTheme == theme
-                            val count = if (theme == "all") state.pages.size else state.pages.count { it.theme == theme }
+                            val count = ArtworkDiscovery.select(state.pages, state.drawings, state.completedPages,
+                                theme.takeUnless { it == "all" }, selectedCollection).size
                             Row(
                                 Modifier.heightIn(min = 48.dp).clip(CircleShape)
                                     .background(if (selected) Lemon else Color.White.copy(alpha = .7f))
@@ -348,7 +389,30 @@ private fun GalleryScreen(
                             }
                         }
                     }
-                    Text("全部为原创创意线稿 · 适合 5–12 岁 · 没有广告", color = Muted, fontSize = 11.sp)
+                    Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(9.dp)) {
+                        ArtworkCollection.entries.forEach { collection ->
+                            GalleryCollectionChip(collection, collectionCounts.getValue(collection), selectedCollection == collection) {
+                                onCollectionSelected(collection)
+                            }
+                        }
+                    }
+                }
+            }
+            if (visiblePages.isEmpty()) item(key = "gallery_empty", span = { GridItemSpan(maxLineSpan) }) {
+                InkCard(Modifier.fillMaxWidth().testTag("gallery_empty"), padding = 22.dp) {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
+                        Bobo(Modifier.size(76.dp))
+                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text(when (selectedCollection) {
+                                ArtworkCollection.IN_PROGRESS -> "这里还没有正在涂的画"
+                                ArtworkCollection.COMPLETED -> "这里会收藏你涂满的作品"
+                                ArtworkCollection.EASY -> "换个主题，找找少区线稿吧"
+                                ArtworkCollection.ALL -> "换个主题看看吧"
+                            }, color = Ink, fontWeight = FontWeight.Black, fontSize = 18.sp)
+                            Text("挑一张喜欢的，想涂多久都可以。", color = Muted, fontSize = 13.sp)
+                            InkButton("看看全部线稿 →", onResetFilters, Modifier.testTag("gallery_reset_filters"), background = Lemon)
+                        }
+                    }
                 }
             }
             items(visiblePages, key = { it.id }) { page ->
@@ -368,6 +432,28 @@ private fun GalleryScreen(
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun GalleryCollectionChip(collection: ArtworkCollection, count: Int, selected: Boolean, onClick: () -> Unit) {
+    val (label, tag) = when (collection) {
+        ArtworkCollection.ALL -> "都看看" to "all"
+        ArtworkCollection.EASY -> "轻松涂" to "easy"
+        ArtworkCollection.IN_PROGRESS -> "接着画" to "in_progress"
+        ArtworkCollection.COMPLETED -> "我的作品" to "completed"
+    }
+    Row(
+        Modifier.heightIn(min = 48.dp).clip(CircleShape)
+            .background(if (selected) Color(0xFFE9E1FF) else Color.White.copy(alpha = .7f))
+            .border(2.dp, if (selected) Color(0xFF7055A6) else Ink.copy(alpha = .18f), CircleShape)
+            .selectable(selected, onClick = onClick, role = Role.Tab).testTag("collection_$tag")
+            .padding(horizontal = 16.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(7.dp),
+    ) {
+        Text(label, color = Ink, fontSize = 13.sp, fontWeight = FontWeight.Black)
+        Text("$count", color = Muted, fontSize = 12.sp)
+        if (collection == ArtworkCollection.EASY) Text("≤10块", color = Muted, fontSize = 11.sp)
     }
 }
 
@@ -423,36 +509,48 @@ private fun PaintScreen(
     onParents: () -> Unit,
 ) {
     var showHint by rememberSaveable(state.page.id) { mutableStateOf(state.showBrushHint && state.strokes.isEmpty()) }
-    LaunchedEffect(state.page.id) {
-        delay(9000)
-        showHint = false
-    }
+    var showClearConfirmation by rememberSaveable(state.page.id) { mutableStateOf(false) }
+    var showHelp by rememberSaveable(state.page.id) { mutableStateOf(false) }
     LaunchedEffect(state.strokes.isNotEmpty(), state.activeStroke != null) {
         if (state.strokes.isNotEmpty() || state.activeStroke != null) showHint = false
     }
-    BoxWithConstraints(Modifier.fillMaxSize()) {
+    BoxWithConstraints(Modifier.fillMaxSize().testTag("paint_workspace")) {
         val portrait = maxHeight > maxWidth
         val narrow = maxWidth < 700.dp
-        Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-            if (portrait || narrow) {
-                Row(Modifier.fillMaxWidth().heightIn(min = if (narrow) 48.dp else 24.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Text(if (portrait) "把平板横过来，画板更大哦～" else "涂个彩 · Color Up!", Modifier.weight(1f), color = Color(0xFF8874BC), fontSize = 12.sp, textAlign = TextAlign.Center)
-                    if (narrow) ToyIconButton(PaintIcon.PARENTS, "家长小贴士", Color(0xFF9F84E8), onParents, Modifier.size(48.dp).testTag("parent_tips"))
+        val auxiliaryHeader = portrait || narrow
+        val splitToolbar = maxWidth < if (portrait) 610.dp else 540.dp
+        val toolbarHeight = if (splitToolbar) 108.dp else 60.dp
+        val headerHeight = if (auxiliaryHeader) 54.dp else 0.dp
+        val availablePaperHeight = (maxHeight - headerHeight - toolbarHeight - 14.dp - 8.dp - 168.dp).coerceAtLeast(1.dp)
+        val paperSide = minOf(maxWidth, availablePaperHeight)
+        val sideHintFits = (maxWidth - paperSide) / 2 >= 180.dp
+        val portraitCompactTools = paperSide < 716.dp
+        val portraitToolbarMinimum = if (splitToolbar) 328.dp else if (portraitCompactTools) 610.dp else 716.dp
+        val portraitToolbarWidth = maxOf(paperSide, portraitToolbarMinimum).coerceAtMost(maxWidth)
+        // Keep the tool/paper/tray cluster together when width limits the square in a tall window.
+        Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+            if (auxiliaryHeader) {
+                Row(Modifier.fillMaxWidth().height(48.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Spacer(Modifier.weight(1f))
+                    ToyIconButton(PaintIcon.PARENTS, "家长小贴士", Color(0xFF9F84E8), onParents, Modifier.size(48.dp).testTag("parent_tips"))
+                    Spacer(Modifier.width(6.dp))
+                    ToyIconButton(PaintIcon.HELP, "怎么涂色", Sky, { showHelp = true }, Modifier.size(48.dp).testTag("paint_help"))
                 }
                 Spacer(Modifier.height(6.dp))
             }
-            PaintToolbar(state, onNavigate, onToolSelected, onUndo, onClear, onExport, onSoundToggle, narrow)
+            PaintToolbar(
+                state, onNavigate, onToolSelected, onUndo, { showClearConfirmation = true }, onExport, onSoundToggle,
+                narrow, splitToolbar, portrait, portraitToolbarWidth, portraitCompactTools,
+            )
             Spacer(Modifier.height(14.dp))
-            BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
-                val side = minOf(maxWidth, maxHeight)
+            Box(Modifier.height(paperSide).fillMaxWidth()) {
                 PaintPaper(
                     state,
-                    { point -> showHint = false; onStrokeStart(point) },
+                    onStrokeStart,
                     onStrokeMove, onStrokeEnd, onStrokeCancel,
-                    Modifier.size(side).align(Alignment.Center),
+                    Modifier.size(paperSide).align(Alignment.TopCenter),
                 )
-                val margin = (maxWidth - side) / 2
-                if (showHint && margin >= 180.dp) {
+                if (showHint && sideHintFits) {
                     Row(
                         Modifier.width(180.dp).align(Alignment.CenterStart).padding(start = 10.dp)
                             .background(Color.White.copy(alpha = .96f), RoundedCornerShape(22.dp))
@@ -461,15 +559,26 @@ private fun PaintScreen(
                     ) {
                         Bobo(Modifier.size(38.dp))
                         Spacer(Modifier.width(8.dp))
-                        Text("选一支蜡笔，\n按住画板慢慢涂～", color = Ink, fontWeight = FontWeight.Bold, fontSize = 12.sp, lineHeight = 19.sp)
+                        Text("选一支蜡笔，\n按住慢慢涂。\n换一块，抬手再涂。", color = Ink, fontWeight = FontWeight.Bold, fontSize = 12.sp, lineHeight = 19.sp)
                     }
                 }
             }
             Spacer(Modifier.height(8.dp))
             PaintCrayonBox(state, onCrayonSelected, onPalettePageChange, Modifier.height(168.dp))
         }
-        if (!narrow) ToyIconButton(PaintIcon.PARENTS, "家长小贴士", Color(0xFFAE97E9), onParents, Modifier.size(48.dp).align(Alignment.TopEnd).testTag("parent_tips"))
+        if (!auxiliaryHeader) {
+            Column(Modifier.align(Alignment.TopEnd), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                ToyIconButton(PaintIcon.PARENTS, "家长小贴士", Color(0xFFAE97E9), onParents, Modifier.size(48.dp).testTag("parent_tips"))
+                ToyIconButton(PaintIcon.HELP, "怎么涂色", Sky, { showHelp = true }, Modifier.size(48.dp).testTag("paint_help"))
+            }
+        }
     }
+    if (showHelp) PaintHelpDialog { showHelp = false }
+    if (showClearConfirmation) ClearDrawingDialog(
+        state = state,
+        onCancel = { showClearConfirmation = false },
+        onConfirm = { showClearConfirmation = false; onClear() },
+    )
 }
 
 @Composable
@@ -482,32 +591,106 @@ private fun PaintToolbar(
     onExport: () -> Unit,
     onSoundToggle: () -> Unit,
     narrow: Boolean,
+    split: Boolean,
+    portrait: Boolean,
+    portraitWidth: Dp,
+    portraitCompact: Boolean,
 ) {
+    if (portrait) {
+        PortraitPaintToolbar(state, onNavigate, onToolSelected, onUndo, onClear, onExport, onSoundToggle, portraitWidth, portraitCompact, split)
+        return
+    }
     val iconSize = if (narrow) 48.dp else 52.dp
-    val progress = pageProgress(state, state.page)
-    Row(
-        Modifier.height(60.dp).testTag("paint_toolbar"),
-        horizontalArrangement = Arrangement.spacedBy(if (narrow) 6.dp else 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        ToyIconButton(PaintIcon.BACK, "返回画册", Color(0xFFA084ED), { onNavigate(GameScreen.GALLERY) }, Modifier.size(iconSize).testTag("paint_back"))
-        ToyIconButton(PaintIcon.ERASER, "橡皮擦", Pink, { onToolSelected(if (state.tool == Tool.ERASER) Tool.CRAYON else Tool.ERASER) }, Modifier.size(iconSize).testTag("tool_eraser"), selected = state.tool == Tool.ERASER)
-        ToyIconButton(PaintIcon.UNDO, "撤销一笔", Color(0xFF9C7AE9), onUndo, Modifier.size(iconSize).testTag("undo"), enabled = state.canUndo)
-        ToyIconButton(PaintIcon.RESET, "重新画，可以撤销", Color(0xFF9771E6), onClear, Modifier.size(iconSize).testTag("clear"), enabled = state.strokes.isNotEmpty())
-        Column(
-            Modifier.width(if (narrow) 174.dp else 220.dp).height(60.dp).background(Color.White.copy(alpha = .95f), RoundedCornerShape(18.dp)).padding(horizontal = 14.dp, vertical = 4.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-        ) {
-            Text(state.page.title, color = Ink, fontSize = if (narrow) 16.sp else 18.sp, fontWeight = FontWeight.Black, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Spacer(Modifier.height(5.dp))
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                CoverageProgress(progress.averageCoverage, Modifier.width(if (narrow) 50.dp else 80.dp).height(6.dp), Color(0xFFE9E1FF))
-                Text("已涂满 ${progress.completedRegions} / ${state.page.regions.size} 个区域", color = Color(0xFF8874BC), fontSize = if (narrow) 9.sp else 10.sp, fontWeight = FontWeight.Bold, maxLines = 1)
+    if (split) {
+        Column(Modifier.height(108.dp).testTag("paint_toolbar"), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            PaintTitle(state, Modifier.width(280.dp).height(44.dp), narrow = true)
+            Row(Modifier.height(58.dp), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                PaintEditTools(state, onNavigate, onToolSelected, onUndo, onClear, iconSize)
+                PaintFileTools(state, onExport, onSoundToggle, iconSize)
             }
         }
-        ToyIconButton(PaintIcon.SAVE, "保存作品", Color(0xFF65CD6A), onExport, Modifier.size(iconSize).testTag("export"))
-        ToyIconButton(PaintIcon.SOUND, if (state.soundEnabled) "关闭声音" else "打开声音", Color(0xFF60ACF8), onSoundToggle, Modifier.size(iconSize).testTag("sound_toggle"), muted = !state.soundEnabled)
+    } else {
+        Row(
+            Modifier.height(60.dp).testTag("paint_toolbar"),
+            horizontalArrangement = Arrangement.spacedBy(if (narrow) 6.dp else 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            PaintEditTools(state, onNavigate, onToolSelected, onUndo, onClear, iconSize)
+            PaintTitle(state, Modifier.width(if (narrow) 174.dp else 220.dp).height(60.dp), narrow)
+            PaintFileTools(state, onExport, onSoundToggle, iconSize)
+        }
+    }
+}
+
+@Composable
+private fun PortraitPaintToolbar(
+    state: ColoringUiState,
+    onNavigate: (GameScreen) -> Unit,
+    onToolSelected: (Tool) -> Unit,
+    onUndo: () -> Unit,
+    onClear: () -> Unit,
+    onExport: () -> Unit,
+    onSoundToggle: () -> Unit,
+    width: Dp,
+    compact: Boolean,
+    split: Boolean,
+) {
+    val iconSize = if (compact) 48.dp else 52.dp
+    val gap = if (compact) 6.dp else 8.dp
+    if (split) {
+        Column(Modifier.width(width).height(108.dp).testTag("paint_toolbar"), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            PaintTitle(state, Modifier.width(280.dp).height(44.dp), narrow = true)
+            Box(Modifier.fillMaxWidth().height(58.dp)) {
+                Row(Modifier.align(Alignment.CenterStart).testTag("paint_tools_left"), horizontalArrangement = Arrangement.spacedBy(gap)) {
+                    PaintEditTools(state, onNavigate, onToolSelected, onUndo, onClear, iconSize)
+                }
+                Row(Modifier.align(Alignment.CenterEnd).testTag("paint_tools_right"), horizontalArrangement = Arrangement.spacedBy(gap)) {
+                    PaintFileTools(state, onExport, onSoundToggle, iconSize)
+                }
+            }
+        }
+    } else {
+        // Independent slots keep the title centered despite the unequal four/two button groups.
+        Box(Modifier.width(width).height(60.dp).testTag("paint_toolbar")) {
+            Row(Modifier.align(Alignment.CenterStart).testTag("paint_tools_left"), horizontalArrangement = Arrangement.spacedBy(gap)) {
+                PaintEditTools(state, onNavigate, onToolSelected, onUndo, onClear, iconSize)
+            }
+            PaintTitle(state, Modifier.width(if (compact) 174.dp else 220.dp).height(60.dp).align(Alignment.Center), compact)
+            Row(Modifier.align(Alignment.CenterEnd).testTag("paint_tools_right"), horizontalArrangement = Arrangement.spacedBy(gap)) {
+                PaintFileTools(state, onExport, onSoundToggle, iconSize)
+            }
+        }
+    }
+}
+
+@Composable
+private fun PaintEditTools(state: ColoringUiState, onNavigate: (GameScreen) -> Unit, onToolSelected: (Tool) -> Unit, onUndo: () -> Unit, onClear: () -> Unit, iconSize: Dp) {
+    ToyIconButton(PaintIcon.BACK, "返回画册", Color(0xFFA084ED), { onNavigate(GameScreen.GALLERY) }, Modifier.size(iconSize).testTag("paint_back"))
+    ToyIconButton(PaintIcon.ERASER, "橡皮擦", Pink, { onToolSelected(if (state.tool == Tool.ERASER) Tool.CRAYON else Tool.ERASER) }, Modifier.size(iconSize).testTag("tool_eraser"), selected = state.tool == Tool.ERASER)
+    ToyIconButton(PaintIcon.UNDO, "撤销一笔", Color(0xFF9C7AE9), onUndo, Modifier.size(iconSize).testTag("undo"), enabled = state.canUndo)
+    ToyIconButton(PaintIcon.RESET, "重新画，可以撤销", Color(0xFF9771E6), onClear, Modifier.size(iconSize).testTag("clear"), enabled = state.strokes.isNotEmpty())
+}
+
+@Composable
+private fun PaintFileTools(state: ColoringUiState, onExport: () -> Unit, onSoundToggle: () -> Unit, iconSize: Dp) {
+    ToyIconButton(PaintIcon.SAVE, "另存为 PNG 图片", Color(0xFF65CD6A), onExport, Modifier.size(iconSize).testTag("export"))
+    ToyIconButton(PaintIcon.SOUND, if (state.soundEnabled) "关闭声音" else "打开声音", Color(0xFF60ACF8), onSoundToggle, Modifier.size(iconSize).testTag("sound_toggle"), muted = !state.soundEnabled)
+}
+
+@Composable
+private fun PaintTitle(state: ColoringUiState, modifier: Modifier, narrow: Boolean) {
+    val progress = pageProgress(state, state.page)
+    Column(
+        modifier.testTag("paint_title").background(Color.White.copy(alpha = .95f), RoundedCornerShape(18.dp)).padding(horizontal = 14.dp, vertical = 4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+    ) {
+        Text(state.page.title, color = Ink, fontSize = if (narrow) 16.sp else 18.sp, fontWeight = FontWeight.Black, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Spacer(Modifier.height(5.dp))
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            CoverageProgress(progress.averageCoverage, Modifier.width(if (narrow) 50.dp else 80.dp).height(6.dp), Color(0xFFE9E1FF))
+            Text("已涂满 ${progress.completedRegions} / ${state.page.regions.size} 个区域", color = Color(0xFF64557F), fontSize = if (narrow) 9.sp else 10.sp, fontWeight = FontWeight.Bold, maxLines = 1)
+        }
     }
 }
 
@@ -517,6 +700,15 @@ private fun PaintPaper(state: ColoringUiState, onStart: (Point) -> Unit, onMove:
     var sparkPoint by remember(state.page.id) { mutableStateOf<Point?>(null) }
     var sparkColor by remember(state.page.id) { mutableStateOf(Color.Transparent) }
     var sparkGeneration by remember(state.page.id) { mutableIntStateOf(0) }
+    LaunchedEffect(state.page.id, state.activeStroke != null) {
+        // Feedback follows an accepted stroke, never an unvalidated pointer-down attempt.
+        val accepted = state.activeStroke ?: return@LaunchedEffect
+        if (ValueAnimator.areAnimatorsEnabled()) {
+            sparkPoint = accepted.points.firstOrNull()
+            sparkColor = if (accepted.tool == Tool.ERASER) Color(0xFFB9B4C2) else Color(accepted.colorArgb.toInt())
+            sparkGeneration++
+        } else sparkPoint = null
+    }
     LaunchedEffect(state.page.id, sparkGeneration) {
         if (sparkPoint != null) {
             sparkPhase.snapTo(0f)
@@ -529,21 +721,12 @@ private fun PaintPaper(state: ColoringUiState, onStart: (Point) -> Unit, onMove:
     }.clip(RoundedCornerShape(23.dp)).background(Color.White).border(4.dp, Color(0xFF9579EC), RoundedCornerShape(23.dp)).testTag("paint_board_frame")) {
         ColoringCanvas(
             state.page, state.strokes, state.activeStroke, Modifier.fillMaxSize().padding(4.dp),
-            onStrokeStart = { point ->
-                if (ValueAnimator.areAnimatorsEnabled()) {
-                    sparkPoint = point
-                    sparkColor = if (state.tool == Tool.ERASER) Color(0xFFB9B4C2) else Color(state.selectedColor.toInt())
-                    sparkGeneration++
-                } else {
-                    sparkPoint = null
-                }
-                onStart(point)
-            },
+            onStrokeStart = onStart,
             onStrokeMove = onMove, onStrokeEnd = onEnd, onStrokeCancel = onCancel,
         )
         sparkPoint?.let { point ->
             // This feedback lives above the paper UI only; stroke replay and exported PNGs omit it.
-            Canvas(Modifier.fillMaxSize().padding(4.dp)) {
+            Canvas(Modifier.fillMaxSize().padding(4.dp).testTag("stroke_spark")) {
                 val phase = sparkPhase.value
                 val side = minOf(size.width, size.height)
                 val center = Offset(point.x / 1000f * side, point.y / 1000f * side)
@@ -566,43 +749,48 @@ private fun PaintCrayonBox(state: ColoringUiState, onCrayonSelected: (Crayon) ->
     val selectedIndex = CrayonPalette.colors.indexOf(currentCrayon).coerceAtLeast(0)
     val pageCount = (CrayonPalette.colors.size + 5) / 6
     var palettePage by rememberSaveable { mutableIntStateOf(selectedIndex / 6) }
-    Column(modifier.widthIn(max = 620.dp).fillMaxWidth().testTag("crayon_tray"), horizontalAlignment = Alignment.CenterHorizontally) {
-        Row(Modifier.height(26.dp).background(Color.White.copy(alpha = .96f), CircleShape).padding(horizontal = 14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Box(Modifier.size(14.dp).background(if (state.tool == Tool.ERASER) Brush.linearGradient(listOf(Color.White, Color.White)) else crayonBrush(currentCrayon), CircleShape).border(2.dp, Color.White, CircleShape))
-            Text(if (state.tool == Tool.ERASER) "橡皮擦" else (if (currentCrayon.gradientStops.isNotEmpty()) "✦ " else "") + currentCrayon.name, color = Color(0xFF64557F), fontWeight = FontWeight.Black, fontSize = 12.sp)
-        }
-        Spacer(Modifier.height(4.dp))
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
-            ToyIconButton(PaintIcon.BACK, "上一组蜡笔", Color(0xFF9F7DEB), {
-                palettePage = (palettePage + pageCount - 1) % pageCount
-                onPalettePageChange()
-            }, Modifier.size(52.dp).testTag("palette_previous"), round = true)
-            Spacer(Modifier.width(14.dp))
-            Row(
-                Modifier.widthIn(max = 424.dp).weight(1f, fill = false).height(116.dp)
-                    .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = .38f), Color(0xFFE1D8F2).copy(alpha = .55f))), RoundedCornerShape(28.dp))
-                    .border(2.dp, Color.White.copy(alpha = .8f), RoundedCornerShape(28.dp)).padding(horizontal = 12.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
-                verticalAlignment = Alignment.Bottom,
-            ) {
-                CrayonPalette.colors.drop(palettePage * 6).take(6).forEachIndexed { index, crayon ->
-                    ToyCrayonButton(
-                        crayon, isCrayonSelected(state, crayon),
-                        { onCrayonSelected(crayon) }, Modifier.weight(1f).height(112.dp).testTag("crayon_${palettePage * 6 + index}"),
-                    )
-                }
+    BoxWithConstraints(modifier.widthIn(max = 620.dp).fillMaxWidth().testTag("crayon_tray")) {
+        val compact = maxWidth < 560.dp
+        val arrowSize = if (compact) 48.dp else 52.dp
+        val arrowGap = if (compact) 6.dp else 14.dp
+        Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(Modifier.height(26.dp).background(Color.White.copy(alpha = .96f), CircleShape).testTag("current_color").padding(horizontal = 14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Box(Modifier.size(14.dp).background(crayonBrush(currentCrayon), CircleShape).border(2.dp, Color.White, CircleShape))
+                Text((if (currentCrayon.gradientStops.isNotEmpty()) "✦ " else "") + currentCrayon.name, color = Color(0xFF64557F), fontWeight = FontWeight.Black, fontSize = 12.sp)
             }
-            Spacer(Modifier.width(14.dp))
-            ToyIconButton(PaintIcon.NEXT, "下一组蜡笔", Color(0xFF9F7DEB), {
-                palettePage = (palettePage + 1) % pageCount
-                onPalettePageChange()
-            }, Modifier.size(52.dp).testTag("palette_next"), round = true)
-        }
-        Spacer(Modifier.height(8.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-            repeat(pageCount) { index ->
-                Box(Modifier.size(if (index == palettePage) 20.dp else 6.dp, 6.dp).background(if (index == palettePage) Color(0xFF785AC5) else Color(0xFFBAA8DD), CircleShape)
-                    .testTag("page_dot_$index").semantics { selected = index == palettePage; contentDescription = "蜡笔颜色组" })
+            Spacer(Modifier.height(4.dp))
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                ToyIconButton(PaintIcon.BACK, "上一组蜡笔", Color(0xFF9F7DEB), {
+                    palettePage = (palettePage + pageCount - 1) % pageCount
+                    onPalettePageChange()
+                }, Modifier.size(arrowSize).testTag("palette_previous"), round = true)
+                Spacer(Modifier.width(arrowGap))
+                Row(
+                    Modifier.widthIn(max = 424.dp).weight(1f, fill = false).height(116.dp)
+                        .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = .38f), Color(0xFFE1D8F2).copy(alpha = .55f))), RoundedCornerShape(28.dp))
+                        .border(2.dp, Color.White.copy(alpha = .8f), RoundedCornerShape(28.dp)).padding(horizontal = if (compact) 6.dp else 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(if (compact) 4.dp else 8.dp, Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.Bottom,
+                ) {
+                    CrayonPalette.colors.drop(palettePage * 6).take(6).forEachIndexed { index, crayon ->
+                        ToyCrayonButton(
+                            crayon, isCrayonSelected(state, crayon),
+                            { onCrayonSelected(crayon) }, Modifier.weight(1f).height(112.dp).testTag("crayon_${palettePage * 6 + index}"),
+                        )
+                    }
+                }
+                Spacer(Modifier.width(arrowGap))
+                ToyIconButton(PaintIcon.NEXT, "下一组蜡笔", Color(0xFF9F7DEB), {
+                    palettePage = (palettePage + 1) % pageCount
+                    onPalettePageChange()
+                }, Modifier.size(arrowSize).testTag("palette_next"), round = true)
+            }
+            Spacer(Modifier.height(8.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+                repeat(pageCount) { index ->
+                    Box(Modifier.size(if (index == palettePage) 20.dp else 6.dp, 6.dp).background(if (index == palettePage) Color(0xFF785AC5) else Color(0xFFBAA8DD), CircleShape)
+                        .testTag("page_dot_$index").semantics { selected = index == palettePage; contentDescription = "蜡笔颜色组" })
+                }
             }
         }
     }
@@ -662,7 +850,7 @@ private fun ToyCrayonButton(crayon: Crayon, selected: Boolean, onClick: () -> Un
     }
 }
 
-private enum class PaintIcon { BACK, NEXT, ERASER, UNDO, RESET, SAVE, SOUND, PARENTS }
+private enum class PaintIcon { BACK, NEXT, ERASER, UNDO, RESET, SAVE, SOUND, PARENTS, HELP }
 
 @Composable
 private fun ToyIconButton(
@@ -698,7 +886,7 @@ private fun ToyIconButton(
 private fun DrawScope.drawToyIcon(icon: PaintIcon, muted: Boolean) {
     scale(size.width / 24f, size.height / 24f, pivot = Offset.Zero) {
         fun path(points: List<Offset>) = Path().apply { points.firstOrNull()?.let { moveTo(it.x, it.y) }; points.drop(1).forEach { lineTo(it.x, it.y) } }
-        fun line(path: Path) = drawPath(path, Color.White, style = DrawStroke(2.5f, cap = StrokeCap.Round, join = StrokeJoin.Round))
+        fun line(path: Path) = drawPath(path, ToolInk, style = DrawStroke(2.5f, cap = StrokeCap.Round, join = StrokeJoin.Round))
         when (icon) {
             PaintIcon.BACK -> line(path(listOf(Offset(15f, 4f), Offset(7f, 12f), Offset(15f, 20f))))
             PaintIcon.NEXT -> line(path(listOf(Offset(9f, 4f), Offset(17f, 12f), Offset(9f, 20f))))
@@ -718,19 +906,27 @@ private fun DrawScope.drawToyIcon(icon: PaintIcon, muted: Boolean) {
                 line(path(listOf(Offset(11f, 11f), Offset(11f, 17f))))
                 line(path(listOf(Offset(15f, 11f), Offset(15f, 17f))))
             }
-            PaintIcon.SAVE -> line(path(listOf(Offset(4f, 12f), Offset(10f, 18f), Offset(21f, 6f))))
+            PaintIcon.SAVE -> {
+                line(path(listOf(Offset(12f, 3f), Offset(12f, 14f))))
+                line(path(listOf(Offset(7f, 10f), Offset(12f, 15f), Offset(17f, 10f))))
+                line(path(listOf(Offset(4f, 16f), Offset(4f, 21f), Offset(20f, 21f), Offset(20f, 16f))))
+            }
             PaintIcon.SOUND -> {
                 val speaker = path(listOf(Offset(3f, 9f), Offset(7f, 9f), Offset(12f, 5f), Offset(12f, 19f), Offset(7f, 15f), Offset(3f, 15f))).apply { close() }
-                drawPath(speaker, Color.White)
+                drawPath(speaker, ToolInk)
                 if (muted) {
                     line(path(listOf(Offset(17f, 9f), Offset(22f, 15f))))
                     line(path(listOf(Offset(22f, 9f), Offset(17f, 15f))))
                 } else {
-                    drawArc(Color.White, -50f, 100f, false, Offset(11f, 5f), Size(11f, 14f), style = DrawStroke(2.3f, cap = StrokeCap.Round))
-                    drawArc(Color.White, -45f, 90f, false, Offset(12f, 8f), Size(5f, 8f), style = DrawStroke(2f, cap = StrokeCap.Round))
+                    drawArc(ToolInk, -50f, 100f, false, Offset(11f, 5f), Size(11f, 14f), style = DrawStroke(2.3f, cap = StrokeCap.Round))
+                    drawArc(ToolInk, -45f, 90f, false, Offset(12f, 8f), Size(5f, 8f), style = DrawStroke(2f, cap = StrokeCap.Round))
                 }
             }
             PaintIcon.PARENTS -> line(Path().apply { moveTo(12f, 21f); cubicTo(-3f, 11f, 5f, 1f, 12f, 8f); cubicTo(19f, 1f, 27f, 11f, 12f, 21f) })
+            PaintIcon.HELP -> {
+                line(Path().apply { moveTo(7f, 7f); cubicTo(7f, 1f, 18f, 1f, 18f, 7f); cubicTo(18f, 11f, 12f, 10f, 12f, 15f) })
+                drawCircle(ToolInk, 1.5f, Offset(12f, 21f))
+            }
         }
     }
 }
@@ -764,29 +960,86 @@ private fun CrayonDrawing(color: Color, modifier: Modifier) {
 }
 
 @Composable
+private fun ClearDrawingDialog(state: ColoringUiState, onCancel: () -> Unit, onConfirm: () -> Unit) {
+    AlertDialog(
+        modifier = Modifier.testTag("clear_confirmation"),
+        onDismissRequest = onCancel,
+        title = { Text("要重新画这张吗？", color = Ink, fontWeight = FontWeight.Black) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(14.dp, Alignment.CenterHorizontally), verticalAlignment = Alignment.CenterVertically) {
+                    ColoringCanvas(state.page, state.strokes, null, Modifier.size(92.dp).clip(RoundedCornerShape(12.dp)).border(1.dp, Ink.copy(alpha = .15f), RoundedCornerShape(12.dp)), interactive = false)
+                    Text("→", color = Ink, fontSize = 24.sp, fontWeight = FontWeight.Black)
+                    ColoringCanvas(state.page, emptyList(), null, Modifier.size(92.dp).clip(RoundedCornerShape(12.dp)).border(1.dp, Ink.copy(alpha = .15f), RoundedCornerShape(12.dp)), interactive = false)
+                }
+                Text("颜色会擦掉，线稿还在。\n重新画后，也能点「撤销」找回来。", color = Muted, lineHeight = 23.sp)
+            }
+        },
+        confirmButton = {
+            TextButton(onConfirm, Modifier.heightIn(min = 48.dp).widthIn(min = 88.dp).testTag("clear_confirm")) {
+                Text("重新画", color = Ink, fontWeight = FontWeight.Bold)
+            }
+        },
+        dismissButton = {
+            TextButton(onCancel, Modifier.heightIn(min = 48.dp).widthIn(min = 88.dp).testTag("clear_cancel")) {
+                Text("继续画", color = Ink, fontWeight = FontWeight.Black)
+            }
+        },
+        containerColor = Paper,
+        shape = RoundedCornerShape(28.dp),
+    )
+}
+
+@Composable
+private fun PaintHelpDialog(onClose: () -> Unit) {
+    AlertDialog(
+        modifier = Modifier.testTag("paint_help_dialog"),
+        onDismissRequest = onClose,
+        icon = { Bobo(Modifier.size(64.dp)) },
+        title = { Text("涂色小秘诀", color = Ink, fontWeight = FontWeight.Black) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Text("①  点一支蜡笔，选你喜欢的颜色。", color = Ink, lineHeight = 24.sp)
+                Text("②  按住一块慢慢涂，颜色不会跑出去。\n换一块，抬手再涂。", color = Ink, lineHeight = 24.sp)
+                Text("③  橡皮只擦一块；画错了，点「撤销」。", color = Ink, lineHeight = 24.sp)
+                Text("画作会自动记在这台平板上。\n「存图」可以另存一张 PNG 图片。", color = Muted, lineHeight = 23.sp)
+            }
+        },
+        confirmButton = {
+            TextButton(onClose, Modifier.heightIn(min = 48.dp).widthIn(min = 88.dp).testTag("paint_help_close")) {
+                Text("开始涂吧", color = Ink, fontWeight = FontWeight.Black)
+            }
+        },
+        containerColor = Paper,
+        shape = RoundedCornerShape(28.dp),
+    )
+}
+
+@Composable
 private fun CelebrationDialog(state: ColoringUiState, onExport: () -> Unit, onAnother: () -> Unit, onClose: () -> Unit) {
     Dialog(onDismissRequest = onClose) {
-        Box(Modifier.widthIn(max = 460.dp).fillMaxWidth().padding(top = 44.dp, bottom = 12.dp)) {
-            InkCard(Modifier.padding(top = 32.dp), padding = 26.dp, shadow = 10.dp) {
-                Spacer(Modifier.height(46.dp))
-                Text("啵啵！整张都涂满啦", Modifier.fillMaxWidth(), color = Coral, fontWeight = FontWeight.Black, fontSize = 12.sp, textAlign = TextAlign.Center)
-                Spacer(Modifier.height(12.dp))
-                Text("哇，涂满啦！", Modifier.fillMaxWidth(), color = Ink, fontWeight = FontWeight.Black, fontSize = 30.sp, textAlign = TextAlign.Center)
-                Spacer(Modifier.height(12.dp))
-                Text("你涂满了《${state.page.title}》的 ${state.page.regions.size} 个区域，\n一共用了 ${state.celebrationColorCount} 种颜色。", Modifier.fillMaxWidth(), color = Muted, fontSize = 13.sp, lineHeight = 23.sp, textAlign = TextAlign.Center)
-                Spacer(Modifier.height(14.dp))
-                Row(Modifier.fillMaxWidth().semantics { contentDescription = "${state.completionStars} 颗星" }, horizontalArrangement = Arrangement.spacedBy(9.dp, Alignment.CenterHorizontally)) {
-                    repeat(3) { index -> Text("★", color = if (index < state.completionStars) Lemon else Color(0xFFE6DCC9), fontSize = 38.sp) }
+        Box(Modifier.widthIn(max = 440.dp).fillMaxWidth().padding(top = 36.dp, bottom = 8.dp)) {
+            InkCard(Modifier.padding(top = 24.dp), padding = 22.dp, shadow = 10.dp) {
+                Spacer(Modifier.height(32.dp))
+                Text("啵啵为你喝彩", Modifier.fillMaxWidth(), color = Ink, fontWeight = FontWeight.Black, fontSize = 12.sp, textAlign = TextAlign.Center)
+                Spacer(Modifier.height(8.dp))
+                Text("哇，涂满啦！", Modifier.fillMaxWidth(), color = Ink, fontWeight = FontWeight.Black, fontSize = 28.sp, textAlign = TextAlign.Center)
+                Spacer(Modifier.height(8.dp))
+                Text("这是属于你的《${state.page.title}》！\n喜欢什么颜色，都可以。", Modifier.fillMaxWidth(), color = Muted, fontSize = 13.sp, lineHeight = 22.sp, textAlign = TextAlign.Center)
+                Spacer(Modifier.height(8.dp))
+                Row(Modifier.fillMaxWidth().testTag("celebration_stars").semantics { contentDescription = "为你的创作喝彩" }, horizontalArrangement = Arrangement.spacedBy(9.dp, Alignment.CenterHorizontally)) {
+                    repeat(3) { Text("★", color = Lemon, fontSize = 34.sp) }
                 }
-                Spacer(Modifier.height(20.dp))
-                InkButton("↓  保存我的作品", onExport, Modifier.fillMaxWidth().testTag("celebration_export"), background = Lemon)
-                Spacer(Modifier.height(15.dp))
+                Spacer(Modifier.height(8.dp))
+                Text("画作自动保存在本机，随时可以接着画。", Modifier.fillMaxWidth().testTag("celebration_autosave"), color = Muted, fontSize = 12.sp, lineHeight = 20.sp, textAlign = TextAlign.Center)
+                Spacer(Modifier.height(14.dp))
+                InkButton("继续画这张", onClose, Modifier.fillMaxWidth().testTag("celebration_close"), background = Lemon)
+                Spacer(Modifier.height(10.dp))
+                InkButton("↓  另存为图片", onExport, Modifier.fillMaxWidth().testTag("celebration_export"))
+                Spacer(Modifier.height(10.dp))
                 InkButton("再涂一张  →", onAnother, Modifier.fillMaxWidth().testTag("celebration_another"))
-                Spacer(Modifier.height(16.dp))
-                Text("也可以先休息一下，再来接着玩。", Modifier.fillMaxWidth(), color = Muted, fontSize = 11.sp, textAlign = TextAlign.Center)
             }
             Bobo(Modifier.size(120.dp).align(Alignment.TopCenter).offset(y = (-24).dp))
-            InkButton("×", onClose, Modifier.size(48.dp).align(Alignment.TopEnd).testTag("celebration_close"))
         }
     }
 }
@@ -829,13 +1082,28 @@ private fun InkCard(modifier: Modifier = Modifier, padding: Dp = 12.dp, shadow: 
 }
 
 @Composable
+private fun InkBackButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val shape = RoundedCornerShape(18.dp)
+    Box(
+        modifier.size(52.dp).drawBehind {
+            drawRoundRect(Ink, topLeft = Offset(0f, 4.dp.toPx()), cornerRadius = CornerRadius(18.dp.toPx()))
+        }.background(Paper, shape).border(3.dp, Ink, shape).clip(shape)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = "返回首页" },
+        contentAlignment = Alignment.Center,
+    ) {
+        Canvas(Modifier.size(26.dp)) { drawToyIcon(PaintIcon.BACK, muted = false) }
+    }
+}
+
+@Composable
 private fun InkButton(label: String, onClick: () -> Unit, modifier: Modifier = Modifier, background: Color = Paper, enabled: Boolean = true) {
     val shape = RoundedCornerShape(18.dp)
     Box(modifier.heightIn(min = 48.dp).alpha(if (enabled) 1f else .35f).drawBehind {
         drawRoundRect(Ink, topLeft = Offset(0f, 4.dp.toPx()), cornerRadius = CornerRadius(18.dp.toPx()))
     }.background(background, shape).border(3.dp, Ink, shape).clip(shape)
         .clickable(enabled = enabled, role = Role.Button, onClick = onClick).padding(horizontal = 15.dp, vertical = 12.dp), contentAlignment = Alignment.Center) {
-        Text(label, color = Ink, fontWeight = FontWeight.Black, fontSize = 16.sp, maxLines = 1)
+        Text(label, color = Ink, fontWeight = FontWeight.Black, fontSize = 16.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
     }
 }
 
