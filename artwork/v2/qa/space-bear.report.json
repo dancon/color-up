@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/space-bear.png",
+  "source_sha256": "3a926df26bd6a14510ca7b788c437d93c8ab74e07e9d59ea1a4f7b12760eb1c6",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 14,
+  "raw_region_count": 14,
+  "fixed_micro_detail_count": 1,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 13935,
+  "minimum_region_area_ratio": 0.0088616,
+  "minimum_touch_diameter_design": 55.064,
+  "ink_fraction": 0.078447,
+  "tonal_shading_fraction": 0.016548,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 100,
+  "gap_repair_fraction": 6.359e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 670531,
+      "area_ratio": 0.42640647,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 258.373,
+      "touch_center_design": [
+        230.463,
+        870.813
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 69808,
+      "area_ratio": 0.04439255,
+      "bbox_pixels": [
+        861,
+        43,
+        370,
+        383
+      ],
+      "bbox_design": [
+        686.603,
+        34.29,
+        295.056,
+        305.423
+      ],
+      "max_touch_diameter_design": 103.975,
+      "touch_center_design": [
+        842.105,
+        128.389
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 117153,
+      "area_ratio": 0.07450035,
+      "bbox_pixels": [
+        75,
+        47,
+        724,
+        641
+      ],
+      "bbox_design": [
+        59.809,
+        37.48,
+        577.352,
+        511.164
+      ],
+      "max_touch_diameter_design": 117.677,
+      "touch_center_design": [
+        225.678,
+        143.541
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 13935,
+      "area_ratio": 0.0088616,
+      "bbox_pixels": [
+        530,
+        124,
+        159,
+        141
+      ],
+      "bbox_design": [
+        422.648,
+        98.884,
+        126.794,
+        112.44
+      ],
+      "max_touch_diameter_design": 78.782,
+      "touch_center_design": [
+        496.013,
+        141.946
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 170609,
+      "area_ratio": 0.10849429,
+      "bbox_pixels": [
+        119,
+        203,
+        633,
+        480
+      ],
+      "bbox_design": [
+        94.896,
+        161.882,
+        504.785,
+        382.775
+      ],
+      "max_touch_diameter_design": 177.672,
+      "touch_center_design": [
+        363.636,
+        252.791
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 28297,
+      "area_ratio": 0.01799473,
+      "bbox_pixels": [
+        426,
+        413,
+        222,
+        197
+      ],
+      "bbox_design": [
+        339.713,
+        329.346,
+        177.033,
+        157.097
+      ],
+      "max_touch_diameter_design": 55.064,
+      "touch_center_design": [
+        432.217,
+        412.281
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 47824,
+      "area_ratio": 0.03041241,
+      "bbox_pixels": [
+        714,
+        413,
+        303,
+        289
+      ],
+      "bbox_design": [
+        569.378,
+        329.346,
+        241.627,
+        230.463
+      ],
+      "max_touch_diameter_design": 132.942,
+      "touch_center_design": [
+        735.247,
+        418.66
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 73456,
+      "area_ratio": 0.0467124,
+      "bbox_pixels": [
+        357,
+        595,
+        481,
+        326
+      ],
+      "bbox_design": [
+        284.689,
+        474.482,
+        383.573,
+        259.968
+      ],
+      "max_touch_diameter_design": 136.687,
+      "touch_center_design": [
+        364.434,
+        665.869
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 22522,
+      "area_ratio": 0.01432227,
+      "bbox_pixels": [
+        530,
+        672,
+        207,
+        194
+      ],
+      "bbox_design": [
+        422.648,
+        535.885,
+        165.072,
+        154.705
+      ],
+      "max_touch_diameter_design": 98.639,
+      "touch_center_design": [
+        507.974,
+        609.25
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 54877,
+      "area_ratio": 0.03489758,
+      "bbox_pixels": [
+        46,
+        686,
+        328,
+        277
+      ],
+      "bbox_design": [
+        36.683,
+        547.049,
+        261.563,
+        220.893
+      ],
+      "max_touch_diameter_design": 130.05,
+      "touch_center_design": [
+        108.453,
+        688.995
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    },
+    {
+      "label": 12,
+      "area_pixels": 42893,
+      "area_ratio": 0.02727667,
+      "bbox_pixels": [
+        390,
+        755,
+        487,
+        255
+      ],
+      "bbox_design": [
+        311.005,
+        602.073,
+        388.357,
+        203.349
+      ],
+      "max_touch_diameter_design": 74.347,
+      "touch_center_design": [
+        526.316,
+        749.601
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 10
+    },
+    {
+      "label": 13,
+      "area_pixels": 74623,
+      "area_ratio": 0.04745453,
+      "bbox_pixels": [
+        769,
+        794,
+        432,
+        289
+      ],
+      "bbox_design": [
+        613.238,
+        633.174,
+        344.498,
+        230.463
+      ],
+      "max_touch_diameter_design": 135.904,
+      "touch_center_design": [
+        877.193,
+        762.36
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 11
+    },
+    {
+      "label": 14,
+      "area_pixels": 48036,
+      "area_ratio": 0.03054722,
+      "bbox_pixels": [
+        467,
+        957,
+        358,
+        219
+      ],
+      "bbox_design": [
+        372.408,
+        763.158,
+        285.486,
+        174.641
+      ],
+      "max_touch_diameter_design": 149.564,
+      "touch_center_design": [
+        570.175,
+        859.649
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 12
+    },
+    {
+      "label": 15,
+      "area_pixels": 14484,
+      "area_ratio": 0.00921072,
+      "bbox_pixels": [
+        727,
+        1023,
+        168,
+        196
+      ],
+      "bbox_design": [
+        579.745,
+        815.789,
+        133.971,
+        156.3
+      ],
+      "max_touch_diameter_design": 70.067,
+      "touch_center_design": [
+        673.046,
+        923.445
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 13
+    }
+  ],
+  "fixed_micro_details": [
+    {
+      "label": 11,
+      "area_pixels": 9,
+      "area_ratio": 5.72e-06,
+      "bbox_pixels": [
+        346,
+        686,
+        3,
+        3
+      ],
+      "bbox_design": [
+        275.917,
+        547.049,
+        2.392,
+        2.392
+      ],
+      "max_touch_diameter_design": 3.19,
+      "touch_center_design": [
+        276.715,
+        547.847
+      ],
+      "touches_border": false,
+      "classification": "fixed_micro_detail",
+      "too_small": false
+    }
+  ],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-space-bear.regions.json"
+}

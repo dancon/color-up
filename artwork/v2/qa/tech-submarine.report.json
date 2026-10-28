@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/tech-submarine.png",
+  "source_sha256": "a2a9696b3138480bd915d59af1573e79e55534a357983aea95d50bda4b2016e1",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 8,
+  "raw_region_count": 8,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 8880,
+  "minimum_region_area_ratio": 0.005647,
+  "minimum_touch_diameter_design": 59.718,
+  "ink_fraction": 0.070484,
+  "tonal_shading_fraction": 0.011677,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 28,
+  "gap_repair_fraction": 1.781e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 909285,
+      "area_ratio": 0.57823577,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 377.735,
+      "touch_center_design": [
+        803.828,
+        188.198
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 312729,
+      "area_ratio": 0.19887174,
+      "bbox_pixels": [
+        282,
+        29,
+        948,
+        882
+      ],
+      "bbox_design": [
+        224.88,
+        23.126,
+        755.981,
+        703.349
+      ],
+      "max_touch_diameter_design": 144.371,
+      "touch_center_design": [
+        420.255,
+        567.783
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 41239,
+      "area_ratio": 0.02622485,
+      "bbox_pixels": [
+        600,
+        477,
+        212,
+        247
+      ],
+      "bbox_design": [
+        478.469,
+        380.383,
+        169.059,
+        196.97
+      ],
+      "max_touch_diameter_design": 168.743,
+      "touch_center_design": [
+        562.998,
+        476.874
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 33783,
+      "area_ratio": 0.02148341,
+      "bbox_pixels": [
+        844,
+        558,
+        192,
+        225
+      ],
+      "bbox_design": [
+        673.046,
+        444.976,
+        153.11,
+        179.426
+      ],
+      "max_touch_diameter_design": 153.11,
+      "touch_center_design": [
+        749.601,
+        532.695
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 8880,
+      "area_ratio": 0.005647,
+      "bbox_pixels": [
+        232,
+        786,
+        168,
+        109
+      ],
+      "bbox_design": [
+        185.008,
+        626.794,
+        133.971,
+        86.922
+      ],
+      "max_touch_diameter_design": 59.718,
+      "touch_center_design": [
+        217.703,
+        661.882
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 27312,
+      "area_ratio": 0.01736834,
+      "bbox_pixels": [
+        676,
+        811,
+        235,
+        197
+      ],
+      "bbox_design": [
+        539.075,
+        646.73,
+        187.4,
+        157.097
+      ],
+      "max_touch_diameter_design": 104.888,
+      "touch_center_design": [
+        635.566,
+        724.083
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 110280,
+      "area_ratio": 0.07012965,
+      "bbox_pixels": [
+        29,
+        822,
+        561,
+        393
+      ],
+      "bbox_design": [
+        23.126,
+        655.502,
+        447.368,
+        313.397
+      ],
+      "max_touch_diameter_design": 113.271,
+      "touch_center_design": [
+        297.448,
+        721.691
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 18142,
+      "area_ratio": 0.01153693,
+      "bbox_pixels": [
+        245,
+        983,
+        160,
+        201
+      ],
+      "bbox_design": [
+        195.375,
+        783.892,
+        127.592,
+        160.287
+      ],
+      "max_touch_diameter_design": 80.712,
+      "touch_center_design": [
+        269.537,
+        862.839
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-tech-submarine.regions.json"
+}

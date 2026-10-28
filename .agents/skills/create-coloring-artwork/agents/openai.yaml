@@ -1,0 +1,7 @@
+interface:
+  display_name: "儿童涂色插画制作"
+  short_description: "从主题生成适合儿童涂色的原创插画，检查闭合区域并按需接入项目"
+  default_prompt: "使用 $create-coloring-artwork 按我的主题制作儿童涂色插画，完成区域检查并交付可接入素材。"
+
+policy:
+  allow_implicit_invocation: true

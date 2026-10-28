@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/tech-car.png",
+  "source_sha256": "8f720d750f49b7e3061624252a59f4b55c9d574f99185562aa997e4f15c1c9c1",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 8,
+  "raw_region_count": 8,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 23073,
+  "minimum_region_area_ratio": 0.01467266,
+  "minimum_touch_diameter_design": 104.949,
+  "ink_fraction": 0.058441,
+  "tonal_shading_fraction": 0.012023,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 42,
+  "gap_repair_fraction": 2.671e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 683837,
+      "area_ratio": 0.43486807,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 245.614,
+      "touch_center_design": [
+        122.01,
+        651.515
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 23073,
+      "area_ratio": 0.01467266,
+      "bbox_pixels": [
+        362,
+        180,
+        211,
+        204
+      ],
+      "bbox_design": [
+        288.676,
+        143.541,
+        168.262,
+        162.679
+      ],
+      "max_touch_diameter_design": 104.949,
+      "touch_center_design": [
+        377.99,
+        220.096
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 147507,
+      "area_ratio": 0.09380318,
+      "bbox_pixels": [
+        278,
+        191,
+        938,
+        590
+      ],
+      "bbox_design": [
+        221.691,
+        152.313,
+        748.006,
+        470.494
+      ],
+      "max_touch_diameter_design": 165.201,
+      "touch_center_design": [
+        598.884,
+        498.405
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 98046,
+      "area_ratio": 0.06234976,
+      "bbox_pixels": [
+        636,
+        206,
+        479,
+        309
+      ],
+      "bbox_design": [
+        507.177,
+        164.274,
+        381.978,
+        246.411
+      ],
+      "max_touch_diameter_design": 143.541,
+      "touch_center_design": [
+        579.745,
+        282.297
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 116815,
+      "area_ratio": 0.07428541,
+      "bbox_pixels": [
+        39,
+        268,
+        642,
+        347
+      ],
+      "bbox_design": [
+        31.1,
+        213.716,
+        511.962,
+        276.715
+      ],
+      "max_touch_diameter_design": 177.033,
+      "touch_center_design": [
+        305.423,
+        385.167
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 37675,
+      "area_ratio": 0.02395842,
+      "bbox_pixels": [
+        882,
+        560,
+        216,
+        224
+      ],
+      "bbox_design": [
+        703.349,
+        446.571,
+        172.249,
+        178.628
+      ],
+      "max_touch_diameter_design": 165.016,
+      "touch_center_design": [
+        788.676,
+        535.088
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 35665,
+      "area_ratio": 0.02268021,
+      "bbox_pixels": [
+        341,
+        653,
+        208,
+        221
+      ],
+      "bbox_design": [
+        271.93,
+        520.734,
+        165.869,
+        176.236
+      ],
+      "max_touch_diameter_design": 161.274,
+      "touch_center_design": [
+        354.067,
+        608.453
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 337956,
+      "area_ratio": 0.21491419,
+      "bbox_pixels": [
+        32,
+        803,
+        1188,
+        427
+      ],
+      "bbox_design": [
+        25.518,
+        640.351,
+        947.368,
+        340.51
+      ],
+      "max_touch_diameter_design": 333.589,
+      "touch_center_design": [
+        610.845,
+        807.018
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-tech-car.regions.json"
+}

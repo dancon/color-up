@@ -1,0 +1,19 @@
+{
+  "id": "tech-car",
+  "title": "会飞的汽车",
+  "theme": "tech",
+  "prompt": "Use case: illustration-story. Create ONE finished professional SIMPLE children's coloring-book illustration, square 1024x1024, for an Android tablet coloring game ages 5–12. Expert illustrator's warm expressive organic drawing with confident flowing curves, tasteful varied line weight and charming asymmetry; never geometric clip-art parts or a diagram. Make the main character or vehicle big, around 70–80% of the image, with a memorable playful pose and one clear amusing story beat. Only 10–16 LARGE enclosed white colorable shapes across the ENTIRE picture, hard maximum 20 including the background. Keep every colorable area broad and easy for a child's finger, no tiny enclosed islands. Use expressive solid-black simple eyes WITHOUT tiny white highlights, and open smile curves; large simple facial shapes. Omit decorative texture, fur tufts, narrow stripes, dense details, screws, tiny windows, scales, grass blades, confetti and background ornaments. Add only 1–2 BIG simple secondary props that support the scene. Background nearly empty WHITE, perhaps one broad sweeping ground/cloud curve and one large simple sun/star, never a detailed scene. Crisp clean bold BLACK outlines on pure WHITE: roughly 6px outer contours and 4px interior at 1024px, continuous CLOSED boundaries, generous blank coloring areas. No gray shading, color, gradient, hatching, sketch/construction marks, paper texture, text, logo, border, or watermark. Keep main subject and appendages inside safe white margins; no cropped character. Finished professional Q-cute children's picture-book ink line art: simpler linework and fewer bigger color blocks, lively and lovable rather than mechanically assembled.\n\nScene: ONE cheeky rounded flying car, in FLAT TWO-DIMENSIONAL SIDE PROFILE, pitches its nose upward as it swoops over ONE large soft cloud. Broad playful silhouette and one very large wing sweeping out from the body. Exactly TWO plain flat white wheels, each bounded by ONE SINGLE circle only, absolutely NO visible wheel thickness, second rim, hub or tread. One large windshield, drawn once with one simple border line and no inner frame. The car has two solid-black oval eyes with no white sclera or highlights and one OPEN curved smile stroke, NO enclosed mouth or tongue. Omit headlights, bumper layers, grilles, plates, seams and speed lines. Cloud is the sole secondary object and safely separated from car, no ground. Only 8–12 broad enclosed white shapes in the entire picture including background; never more than 16. Each region must fit a circle at least 7 percent of picture width. Professional expressive flowing curves, charming asymmetry, safe white margins.",
+  "tool": "built-in image_gen",
+  "sha256": "8f720d750f49b7e3061624252a59f4b55c9d574f99185562aa997e4f15c1c9c1",
+  "promptSha256": "9f03888c9991bef68f1554276e729e9e0c152c3e2a36c183aea18da8804f8bab",
+  "generatedSource": "/Users/bytedance/.codex/generated_images/01a17db7-79e5-7b82-91ed-64342579aad0/exec-40667fd1-c3df-4b5f-b5e5-f06c03cc1774.png",
+  "visualReview": "Accepted after inspecting both original PNG and all numbered region masks: expressive simple professional line art; major subject areas closed and separate from background; no narrow mechanical rings or omitted excess regions.",
+  "qa": {
+    "report": "artwork/v2/qa/tech-car.report.json",
+    "preview": "artwork/v2/qa/tech-car.regions-preview.png",
+    "status": "pass",
+    "regionCount": 8,
+    "smallSubstantiveRegionCount": 0,
+    "minimumTouchDiameter": 104.949
+  }
+}

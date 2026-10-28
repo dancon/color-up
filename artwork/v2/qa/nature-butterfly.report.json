@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/nature-butterfly.png",
+  "source_sha256": "15f914d8f3b443de258506b7c90fbb325fe04fae9bf53aeec532296cd26bd492",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 11,
+  "raw_region_count": 11,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 14265,
+  "minimum_region_area_ratio": 0.00907145,
+  "minimum_touch_diameter_design": 81.699,
+  "ink_fraction": 0.066022,
+  "tonal_shading_fraction": 0.011688,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 85,
+  "gap_repair_fraction": 5.405e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 850270,
+      "area_ratio": 0.54070674,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 231.26,
+      "touch_center_design": [
+        493.62,
+        114.833
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 248666,
+      "area_ratio": 0.15813257,
+      "bbox_pixels": [
+        53,
+        32,
+        530,
+        670
+      ],
+      "bbox_design": [
+        42.265,
+        25.518,
+        422.648,
+        534.29
+      ],
+      "max_touch_diameter_design": 365.903,
+      "touch_center_design": [
+        235.247,
+        284.689
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 43898,
+      "area_ratio": 0.02791577,
+      "bbox_pixels": [
+        588,
+        488,
+        255,
+        249
+      ],
+      "bbox_design": [
+        468.9,
+        389.155,
+        203.349,
+        198.565
+      ],
+      "max_touch_diameter_design": 94.866,
+      "touch_center_design": [
+        618.82,
+        460.925
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 130683,
+      "area_ratio": 0.0831044,
+      "bbox_pixels": [
+        32,
+        609,
+        475,
+        385
+      ],
+      "bbox_design": [
+        25.518,
+        485.646,
+        378.788,
+        307.018
+      ],
+      "max_touch_diameter_design": 296.024,
+      "touch_center_design": [
+        181.818,
+        641.148
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 14265,
+      "area_ratio": 0.00907145,
+      "bbox_pixels": [
+        516,
+        657,
+        147,
+        154
+      ],
+      "bbox_design": [
+        411.483,
+        523.923,
+        117.225,
+        122.807
+      ],
+      "max_touch_diameter_design": 81.699,
+      "touch_center_design": [
+        467.305,
+        595.694
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 32994,
+      "area_ratio": 0.02098166,
+      "bbox_pixels": [
+        820,
+        697,
+        216,
+        196
+      ],
+      "bbox_design": [
+        653.907,
+        555.821,
+        172.249,
+        156.3
+      ],
+      "max_touch_diameter_design": 138.967,
+      "touch_center_design": [
+        732.855,
+        625.199
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 18284,
+      "area_ratio": 0.01162723,
+      "bbox_pixels": [
+        459,
+        739,
+        189,
+        177
+      ],
+      "bbox_design": [
+        366.029,
+        589.314,
+        150.718,
+        141.148
+      ],
+      "max_touch_diameter_design": 92.008,
+      "touch_center_design": [
+        429.027,
+        680.223
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 19432,
+      "area_ratio": 0.01235727,
+      "bbox_pixels": [
+        411,
+        844,
+        184,
+        214
+      ],
+      "bbox_design": [
+        327.751,
+        673.046,
+        146.73,
+        170.654
+      ],
+      "max_touch_diameter_design": 98.174,
+      "touch_center_design": [
+        379.585,
+        767.943
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 44781,
+      "area_ratio": 0.02847729,
+      "bbox_pixels": [
+        973,
+        847,
+        251,
+        258
+      ],
+      "bbox_design": [
+        775.917,
+        675.439,
+        200.159,
+        205.742
+      ],
+      "max_touch_diameter_design": 149.18,
+      "touch_center_design": [
+        901.116,
+        763.955
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 38051,
+      "area_ratio": 0.02419753,
+      "bbox_pixels": [
+        632,
+        848,
+        226,
+        221
+      ],
+      "bbox_design": [
+        503.987,
+        676.236,
+        180.223,
+        176.236
+      ],
+      "max_touch_diameter_design": 155.697,
+      "touch_center_design": [
+        581.34,
+        763.158
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    },
+    {
+      "label": 11,
+      "area_pixels": 27286,
+      "area_ratio": 0.01735181,
+      "bbox_pixels": [
+        836,
+        880,
+        192,
+        180
+      ],
+      "bbox_design": [
+        666.667,
+        701.754,
+        153.11,
+        143.541
+      ],
+      "max_touch_diameter_design": 143.026,
+      "touch_center_design": [
+        747.209,
+        772.727
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 10
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-nature-butterfly.regions.json"
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/space-saturn.png",
+  "source_sha256": "12b3c6ae0ddfa5c2d585434faea5ad30378e2bfa04a3ace74b234aee4453726c",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 8,
+  "raw_region_count": 8,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 7667,
+  "minimum_region_area_ratio": 0.00487563,
+  "minimum_touch_diameter_design": 53.968,
+  "ink_fraction": 0.067924,
+  "tonal_shading_fraction": 0.011501,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 15,
+  "gap_repair_fraction": 9.54e-06,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 713254,
+      "area_ratio": 0.45357504,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 264.753,
+      "touch_center_design": [
+        594.896,
+        131.579
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 45203,
+      "area_ratio": 0.02874565,
+      "bbox_pixels": [
+        56,
+        45,
+        317,
+        290
+      ],
+      "bbox_design": [
+        44.657,
+        35.885,
+        252.791,
+        231.26
+      ],
+      "max_touch_diameter_design": 133.753,
+      "touch_center_design": [
+        173.046,
+        156.3
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 52086,
+      "area_ratio": 0.03312272,
+      "bbox_pixels": [
+        875,
+        93,
+        323,
+        354
+      ],
+      "bbox_design": [
+        697.767,
+        74.163,
+        257.576,
+        282.297
+      ],
+      "max_touch_diameter_design": 122.683,
+      "touch_center_design": [
+        811.802,
+        272.727
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 7667,
+      "area_ratio": 0.00487563,
+      "bbox_pixels": [
+        1032,
+        172,
+        99,
+        98
+      ],
+      "bbox_design": [
+        822.967,
+        137.161,
+        78.947,
+        78.15
+      ],
+      "max_touch_diameter_design": 78.15,
+      "touch_center_design": [
+        862.041,
+        175.439
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 318373,
+      "area_ratio": 0.2024609,
+      "bbox_pixels": [
+        210,
+        327,
+        838,
+        603
+      ],
+      "bbox_design": [
+        167.464,
+        260.766,
+        668.262,
+        480.861
+      ],
+      "max_touch_diameter_design": 216.16,
+      "touch_center_design": [
+        726.475,
+        628.389
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 204083,
+      "area_ratio": 0.12978119,
+      "bbox_pixels": [
+        31,
+        462,
+        1191,
+        624
+      ],
+      "bbox_design": [
+        24.721,
+        368.421,
+        949.761,
+        497.608
+      ],
+      "max_touch_diameter_design": 157.475,
+      "touch_center_design": [
+        888.357,
+        775.917
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 9187,
+      "area_ratio": 0.00584223,
+      "bbox_pixels": [
+        575,
+        627,
+        170,
+        109
+      ],
+      "bbox_design": [
+        458.533,
+        500.0,
+        135.566,
+        86.922
+      ],
+      "max_touch_diameter_design": 53.968,
+      "touch_center_design": [
+        511.962,
+        556.619
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 115837,
+      "area_ratio": 0.07366348,
+      "bbox_pixels": [
+        157,
+        758,
+        752,
+        434
+      ],
+      "bbox_design": [
+        125.199,
+        604.466,
+        599.681,
+        346.093
+      ],
+      "max_touch_diameter_design": 152.719,
+      "touch_center_design": [
+        374.003,
+        847.687
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-space-saturn.regions.json"
+}

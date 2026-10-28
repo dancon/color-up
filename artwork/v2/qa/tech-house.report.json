@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/tech-house.png",
+  "source_sha256": "70853a629feb215e532546399bf2af472147efd7f790794825c6d2a11dafce2a",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 10,
+  "raw_region_count": 10,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 54634,
+  "minimum_region_area_ratio": 0.03474305,
+  "minimum_touch_diameter_design": 73.883,
+  "ink_fraction": 0.051339,
+  "tonal_shading_fraction": 0.013798,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 37,
+  "gap_repair_fraction": 2.353e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 504872,
+      "area_ratio": 0.32106001,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1126
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        897.927
+      ],
+      "max_touch_diameter_design": 323.764,
+      "touch_center_design": [
+        838.118,
+        161.085
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 213228,
+      "area_ratio": 0.13559671,
+      "bbox_pixels": [
+        23,
+        89,
+        605,
+        559
+      ],
+      "bbox_design": [
+        18.341,
+        70.973,
+        482.456,
+        445.774
+      ],
+      "max_touch_diameter_design": 303.45,
+      "touch_center_design": [
+        298.246,
+        256.778
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 84309,
+      "area_ratio": 0.05361408,
+      "bbox_pixels": [
+        323,
+        383,
+        905,
+        433
+      ],
+      "bbox_design": [
+        257.576,
+        305.423,
+        721.691,
+        345.295
+      ],
+      "max_touch_diameter_design": 73.883,
+      "touch_center_design": [
+        937.799,
+        612.44
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 54634,
+      "area_ratio": 0.03474305,
+      "bbox_pixels": [
+        361,
+        407,
+        398,
+        311
+      ],
+      "bbox_design": [
+        287.879,
+        324.561,
+        317.384,
+        248.006
+      ],
+      "max_touch_diameter_design": 142.089,
+      "touch_center_design": [
+        434.609,
+        464.912
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 85694,
+      "area_ratio": 0.05449484,
+      "bbox_pixels": [
+        611,
+        407,
+        435,
+        328
+      ],
+      "bbox_design": [
+        487.241,
+        324.561,
+        346.89,
+        261.563
+      ],
+      "max_touch_diameter_design": 206.137,
+      "touch_center_design": [
+        637.161,
+        469.697
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 88093,
+      "area_ratio": 0.05602042,
+      "bbox_pixels": [
+        136,
+        523,
+        296,
+        561
+      ],
+      "bbox_design": [
+        108.453,
+        417.065,
+        236.045,
+        447.368
+      ],
+      "max_touch_diameter_design": 153.318,
+      "touch_center_design": [
+        204.944,
+        751.196
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 130583,
+      "area_ratio": 0.08304081,
+      "bbox_pixels": [
+        360,
+        573,
+        799,
+        533
+      ],
+      "bbox_design": [
+        287.081,
+        456.938,
+        637.161,
+        425.04
+      ],
+      "max_touch_diameter_design": 118.022,
+      "touch_center_design": [
+        629.187,
+        814.992
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 70994,
+      "area_ratio": 0.04514676,
+      "bbox_pixels": [
+        413,
+        774,
+        319,
+        262
+      ],
+      "bbox_design": [
+        329.346,
+        617.225,
+        254.386,
+        208.931
+      ],
+      "max_touch_diameter_design": 207.435,
+      "touch_center_design": [
+        466.507,
+        721.691
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 59203,
+      "area_ratio": 0.03764858,
+      "bbox_pixels": [
+        871,
+        794,
+        210,
+        316
+      ],
+      "bbox_design": [
+        694.577,
+        633.174,
+        167.464,
+        251.994
+      ],
+      "max_touch_diameter_design": 167.464,
+      "touch_center_design": [
+        778.309,
+        783.094
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 200138,
+      "area_ratio": 0.12727247,
+      "bbox_pixels": [
+        0,
+        1064,
+        1254,
+        190
+      ],
+      "bbox_design": [
+        0.0,
+        848.485,
+        1000.0,
+        151.515
+      ],
+      "max_touch_diameter_design": 151.515,
+      "touch_center_design": [
+        320.574,
+        923.445
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-tech-house.regions.json"
+}

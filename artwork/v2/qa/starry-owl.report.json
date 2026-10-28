@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/starry-owl.png",
+  "source_sha256": "e3e71ae5e6907e9d890c950c59ef06c52a36242f7eb5cda326ecd4d4d4d136e1",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions",
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 8,
+  "raw_region_count": 8,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 7012,
+  "minimum_region_area_ratio": 0.0044591,
+  "minimum_touch_diameter_design": 45.671,
+  "ink_fraction": 0.069781,
+  "tonal_shading_fraction": 0.015326,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 84,
+  "gap_repair_fraction": 5.342e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 631103,
+      "area_ratio": 0.40133328,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1147
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        914.673
+      ],
+      "max_touch_diameter_design": 232.855,
+      "touch_center_design": [
+        600.478,
+        115.63
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 31709,
+      "area_ratio": 0.0201645,
+      "bbox_pixels": [
+        905,
+        53,
+        274,
+        284
+      ],
+      "bbox_design": [
+        721.691,
+        42.265,
+        218.501,
+        226.475
+      ],
+      "max_touch_diameter_design": 88.929,
+      "touch_center_design": [
+        773.525,
+        184.211
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 433573,
+      "area_ratio": 0.27571929,
+      "bbox_pixels": [
+        26,
+        139,
+        1202,
+        882
+      ],
+      "bbox_design": [
+        20.734,
+        110.845,
+        958.533,
+        703.349
+      ],
+      "max_touch_diameter_design": 199.285,
+      "touch_center_design": [
+        731.26,
+        592.504
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 145334,
+      "area_ratio": 0.09242132,
+      "bbox_pixels": [
+        331,
+        583,
+        410,
+        470
+      ],
+      "bbox_design": [
+        263.955,
+        464.912,
+        326.954,
+        374.801
+      ],
+      "max_touch_diameter_design": 308.376,
+      "touch_center_design": [
+        433.812,
+        644.338
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 106709,
+      "area_ratio": 0.06785877,
+      "bbox_pixels": [
+        0,
+        984,
+        1254,
+        258
+      ],
+      "bbox_design": [
+        0.0,
+        784.689,
+        1000.0,
+        205.742
+      ],
+      "max_touch_diameter_design": 81.34,
+      "touch_center_design": [
+        413.876,
+        885.167
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 7012,
+      "area_ratio": 0.0044591,
+      "bbox_pixels": [
+        381,
+        1015,
+        128,
+        91
+      ],
+      "bbox_design": [
+        303.828,
+        809.41,
+        102.073,
+        72.568
+      ],
+      "max_touch_diameter_design": 45.671,
+      "touch_center_design": [
+        362.041,
+        831.738
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 7312,
+      "area_ratio": 0.00464987,
+      "bbox_pixels": [
+        639,
+        1022,
+        132,
+        89
+      ],
+      "bbox_design": [
+        509.569,
+        814.992,
+        105.263,
+        70.973
+      ],
+      "max_touch_diameter_design": 46.69,
+      "touch_center_design": [
+        549.442,
+        838.118
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 99949,
+      "area_ratio": 0.06355993,
+      "bbox_pixels": [
+        0,
+        1086,
+        1254,
+        168
+      ],
+      "bbox_design": [
+        0.0,
+        866.029,
+        1000.0,
+        133.971
+      ],
+      "max_touch_diameter_design": 118.022,
+      "touch_center_design": [
+        58.214,
+        940.989
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-starry-owl.regions.json"
+}

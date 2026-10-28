@@ -1,0 +1,336 @@
+{
+  "count": 36,
+  "regionLimit": 20,
+  "actualRegionRange": [
+    5,
+    17
+  ],
+  "totalRegions": 357,
+  "generation": "built-in image_gen",
+  "items": [
+    {
+      "id": "art2-cat",
+      "title": "猫咪与毛线球",
+      "series": "自然世界",
+      "regions": 14,
+      "source": "source/cat.png",
+      "prompt": "prompts/cat.json",
+      "sha256": "dde90b82d92a9aab543c5e18db2643da12ecf4a8ad794aa0b5e06d616f566ca8"
+    },
+    {
+      "id": "art2-nature-rabbit",
+      "title": "小兔拔萝卜",
+      "series": "自然世界",
+      "regions": 6,
+      "source": "source/nature-rabbit.png",
+      "prompt": "prompts/nature-rabbit.json",
+      "sha256": "2804aa5d6966c58408f495ef70401aefdc87aa11f3ce02dd0a7347996495256b"
+    },
+    {
+      "id": "art2-nature-deer",
+      "title": "森林小鹿",
+      "series": "自然世界",
+      "regions": 11,
+      "source": "source/nature-deer.png",
+      "prompt": "prompts/nature-deer.json",
+      "sha256": "ae8fcde99e0976266546beb12858e08753a009a86d1fd7772cad0db405ee274f"
+    },
+    {
+      "id": "art2-fish",
+      "title": "泡泡小鱼",
+      "series": "自然世界",
+      "regions": 7,
+      "source": "source/fish.png",
+      "prompt": "prompts/fish.json",
+      "sha256": "61aec330278c5b73d1a7ed8bc8fc9b9f58d7e0ffeaa4da51ca97c993dc3a697e"
+    },
+    {
+      "id": "art2-flower",
+      "title": "微笑花园",
+      "series": "自然世界",
+      "regions": 12,
+      "source": "source/flower.png",
+      "prompt": "prompts/flower.json",
+      "sha256": "4691ac7b6db831c1efbcb4812e158b93cd83a5a4b985c0ba7f209ddca6287b8d"
+    },
+    {
+      "id": "art2-nature-butterfly",
+      "title": "蝴蝶花丛",
+      "series": "自然世界",
+      "regions": 11,
+      "source": "source/nature-butterfly.png",
+      "prompt": "prompts/nature-butterfly.json",
+      "sha256": "15f914d8f3b443de258506b7c90fbb325fe04fae9bf53aeec532296cd26bd492"
+    },
+    {
+      "id": "art2-nature-sunflower",
+      "title": "向日葵田",
+      "series": "自然世界",
+      "regions": 13,
+      "source": "source/nature-sunflower.png",
+      "prompt": "prompts/nature-sunflower.json",
+      "sha256": "0760514abb8411c800cf9a93e4e727fade553357ad60d81e8bbcf6fd9746310e"
+    },
+    {
+      "id": "art2-nature-penguin",
+      "title": "雪地企鹅",
+      "series": "自然世界",
+      "regions": 9,
+      "source": "source/nature-penguin.png",
+      "prompt": "prompts/nature-penguin.json",
+      "sha256": "a24d44db890f6a6dcf9aebeb23be815179602eb61837b9bf11b80c130d9e5c77"
+    },
+    {
+      "id": "art2-nature-shells",
+      "title": "海边贝壳",
+      "series": "自然世界",
+      "regions": 9,
+      "source": "source/nature-shells.png",
+      "prompt": "prompts/nature-shells.json",
+      "sha256": "77571693e1ee6adffd59d6d8483f652071ed7e45d6bb4c6d92bf6e1b2c9dd5cc"
+    },
+    {
+      "id": "art2-starry-moon",
+      "title": "月亮晚安",
+      "series": "星空奇想",
+      "regions": 8,
+      "source": "source/starry-moon.png",
+      "prompt": "prompts/starry-moon.json",
+      "sha256": "e5e5548eef863b1cb0394a422aeb42dcfe8b88387fdff1024b27af7de279c9fc"
+    },
+    {
+      "id": "art2-starry-fox",
+      "title": "星星收藏家",
+      "series": "星空奇想",
+      "regions": 11,
+      "source": "source/starry-fox.png",
+      "prompt": "prompts/starry-fox.json",
+      "sha256": "3d95c349211695d745fae989ef3960cbee9841938f488e1163dd464a8f8d7de4"
+    },
+    {
+      "id": "art2-starry-boat",
+      "title": "银河小船",
+      "series": "星空奇想",
+      "regions": 5,
+      "source": "source/starry-boat.png",
+      "prompt": "prompts/starry-boat.json",
+      "sha256": "47fe6b646218e76bd9d2b5f656f144a63f8bfbf59ee406b99f3e6f0d60654e66"
+    },
+    {
+      "id": "art2-starry-owl",
+      "title": "猫头鹰守夜",
+      "series": "星空奇想",
+      "regions": 8,
+      "source": "source/starry-owl.png",
+      "prompt": "prompts/starry-owl.json",
+      "sha256": "e3e71ae5e6907e9d890c950c59ef06c52a36242f7eb5cda326ecd4d4d4d136e1"
+    },
+    {
+      "id": "art2-starry-shooting",
+      "title": "流星许愿",
+      "series": "星空奇想",
+      "regions": 9,
+      "source": "source/starry-shooting.png",
+      "prompt": "prompts/starry-shooting.json",
+      "sha256": "73ae54807af6e2c80a8b9ab23e08a40439140cc27e84f22c1d1d7d8fa332045e"
+    },
+    {
+      "id": "art2-starry-telescope",
+      "title": "小小观星家",
+      "series": "星空奇想",
+      "regions": 15,
+      "source": "source/starry-telescope.png",
+      "prompt": "prompts/starry-telescope.json",
+      "sha256": "9b08780dcb44ac32dc29486d207ee199bfc6ac2a0d7c6e0b60bf0e003d8dac2f"
+    },
+    {
+      "id": "art2-starry-castle",
+      "title": "云上城堡",
+      "series": "星空奇想",
+      "regions": 12,
+      "source": "source/starry-castle.png",
+      "prompt": "prompts/starry-castle.json",
+      "sha256": "b0021c03c738786ffaa261a7c6027b14e7ecac586742de5a918a5ecda4f9af20"
+    },
+    {
+      "id": "art2-starry-fireflies",
+      "title": "萤火虫森林",
+      "series": "星空奇想",
+      "regions": 9,
+      "source": "source/starry-fireflies.png",
+      "prompt": "prompts/starry-fireflies.json",
+      "sha256": "8bb7b63a50098508d44ed52f89d11b12fa74b55bed7bbc1ef517c482e6d014c7"
+    },
+    {
+      "id": "art2-starry-rainbow",
+      "title": "彩虹星夜",
+      "series": "星空奇想",
+      "regions": 9,
+      "source": "source/starry-rainbow.png",
+      "prompt": "prompts/starry-rainbow.json",
+      "sha256": "dfef6fc961f10e6a639b11be18ae52d6af82982152ae26f362372c54b1a0c11d"
+    },
+    {
+      "id": "art2-rocket",
+      "title": "小火箭升空",
+      "series": "太空探险",
+      "regions": 10,
+      "source": "source/rocket.png",
+      "prompt": "prompts/rocket.json",
+      "sha256": "03215f68510c3d360a89a4dd8c7bb90a8e91f27881445a0bff3dacfff5270c31"
+    },
+    {
+      "id": "art2-space-bear",
+      "title": "宇航员小熊",
+      "series": "太空探险",
+      "regions": 14,
+      "source": "source/space-bear.png",
+      "prompt": "prompts/space-bear.json",
+      "sha256": "3a926df26bd6a14510ca7b788c437d93c8ab74e07e9d59ea1a4f7b12760eb1c6"
+    },
+    {
+      "id": "art2-space-alien",
+      "title": "外星小访客",
+      "series": "太空探险",
+      "regions": 8,
+      "source": "source/space-alien.png",
+      "prompt": "prompts/space-alien.json",
+      "sha256": "853f6622b1f297e9ab355eaa1d1f63d45565c7262d9649a09748190f8582106d"
+    },
+    {
+      "id": "art2-space-saturn",
+      "title": "土星环游记",
+      "series": "太空探险",
+      "regions": 8,
+      "source": "source/space-saturn.png",
+      "prompt": "prompts/space-saturn.json",
+      "sha256": "12b3c6ae0ddfa5c2d585434faea5ad30378e2bfa04a3ace74b234aee4453726c"
+    },
+    {
+      "id": "art2-space-dog",
+      "title": "太空狗狗",
+      "series": "太空探险",
+      "regions": 9,
+      "source": "source/space-dog.png",
+      "prompt": "prompts/space-dog.json",
+      "sha256": "b4d90f3782c611c7f8b462543523d1529b5e33c6afd181fd28bf578199cec0a2"
+    },
+    {
+      "id": "art2-space-party",
+      "title": "星球派对",
+      "series": "太空探险",
+      "regions": 6,
+      "source": "source/space-party.png",
+      "prompt": "prompts/space-party.json",
+      "sha256": "fd03ab78c60d484b8fdd470ce24cf203e0641d4846e8a122e2e0721ed962c7fb"
+    },
+    {
+      "id": "art2-space-rover",
+      "title": "月面巡逻车",
+      "series": "太空探险",
+      "regions": 10,
+      "source": "source/space-rover.png",
+      "prompt": "prompts/space-rover.json",
+      "sha256": "a975d56f3995db95e606dcafa59850ceead34e1f753b7c5785c78d2b3ea06ddc"
+    },
+    {
+      "id": "art2-space-base",
+      "title": "月球基地",
+      "series": "太空探险",
+      "regions": 7,
+      "source": "source/space-base.png",
+      "prompt": "prompts/space-base.json",
+      "sha256": "11c603dfaa87a555fc054efbf0c2ec82fefcc32ba6aad74b92c77d350ba4b730"
+    },
+    {
+      "id": "art2-space-starship",
+      "title": "星际飞船",
+      "series": "太空探险",
+      "regions": 10,
+      "source": "source/space-starship.png",
+      "prompt": "prompts/space-starship.json",
+      "sha256": "89ebcb0de6dc8ec73263acb41c170878a7da1227fe2bf3e25fab1987a2be5da7"
+    },
+    {
+      "id": "art2-tech-robot",
+      "title": "机器人好朋友",
+      "series": "科技乐园",
+      "regions": 7,
+      "source": "source/tech-robot.png",
+      "prompt": "prompts/tech-robot.json",
+      "sha256": "dc9b92095956aa32063cb06cbaa664420c57256b06aa4b778a4ae08302488022"
+    },
+    {
+      "id": "art2-tech-train",
+      "title": "小火车出发",
+      "series": "科技乐园",
+      "regions": 12,
+      "source": "source/tech-train.png",
+      "prompt": "prompts/tech-train.json",
+      "sha256": "8fb217f532b03eb10e44bea165a7a17f4bd9ed3881e28b39c4e0f3c6f574a1f8"
+    },
+    {
+      "id": "art2-tech-submarine",
+      "title": "深海潜水艇",
+      "series": "科技乐园",
+      "regions": 8,
+      "source": "source/tech-submarine.png",
+      "prompt": "prompts/tech-submarine.json",
+      "sha256": "a2a9696b3138480bd915d59af1573e79e55534a357983aea95d50bda4b2016e1"
+    },
+    {
+      "id": "art2-tech-city",
+      "title": "未来城市",
+      "series": "科技乐园",
+      "regions": 17,
+      "source": "source/tech-city.png",
+      "prompt": "prompts/tech-city.json",
+      "sha256": "ce985ab1eee06f9e0743964eacb0920176a400945b4b9f1f6917322a89789857"
+    },
+    {
+      "id": "art2-tech-house",
+      "title": "太阳能小屋",
+      "series": "科技乐园",
+      "regions": 10,
+      "source": "source/tech-house.png",
+      "prompt": "prompts/tech-house.json",
+      "sha256": "70853a629feb215e532546399bf2af472147efd7f790794825c6d2a11dafce2a"
+    },
+    {
+      "id": "art2-tech-car",
+      "title": "会飞的汽车",
+      "series": "科技乐园",
+      "regions": 8,
+      "source": "source/tech-car.png",
+      "prompt": "prompts/tech-car.json",
+      "sha256": "8f720d750f49b7e3061624252a59f4b55c9d574f99185562aa997e4f15c1c9c1"
+    },
+    {
+      "id": "art2-tech-drone",
+      "title": "无人机快递",
+      "series": "科技乐园",
+      "regions": 15,
+      "source": "source/tech-drone.png",
+      "prompt": "prompts/tech-drone.json",
+      "sha256": "c17c6a69aac3418bd8c68180b2bbce61db1bd994acbeb0392aa517c1b4d368ab"
+    },
+    {
+      "id": "art2-tech-bakery",
+      "title": "机器人做蛋糕",
+      "series": "科技乐园",
+      "regions": 13,
+      "source": "source/tech-bakery.png",
+      "prompt": "prompts/tech-bakery.json",
+      "sha256": "645af507f40ab79598a24d078cd562a13d549e4ea86ec447452c242b4ddbdc94"
+    },
+    {
+      "id": "art2-tech-satellite",
+      "title": "卫星发射台",
+      "series": "科技乐园",
+      "regions": 7,
+      "source": "source/tech-satellite.png",
+      "prompt": "prompts/tech-satellite.json",
+      "sha256": "fea087655d75606ae6d7682a339834ccac480f25f09040eb21e80852bf3d9585"
+    }
+  ]
+}

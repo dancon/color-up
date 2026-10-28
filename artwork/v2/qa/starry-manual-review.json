@@ -1,0 +1,96 @@
+{
+  "reviewer": "compose_ui",
+  "gate": "Strict automated QA plus human visual review of original and numbered region preview",
+  "images": [
+    {
+      "id": "starry-moon",
+      "sourceSha256": "e5e5548eef863b1cb0394a422aeb42dcfe8b88387fdff1024b27af7de279c9fc",
+      "regionCount": 8,
+      "minimumTouchDiameterDesign": 80.601,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Moon, sleeping cap with broad band and tip, both stars and cloud have separate closed masks; none merge into the background."
+    },
+    {
+      "id": "starry-fox",
+      "sourceSha256": "3d95c349211695d745fae989ef3960cbee9841938f488e1163dd464a8f8d7de4",
+      "regionCount": 11,
+      "minimumTouchDiameterDesign": 50.359,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Fox body, inner ears, broad tail sections, foot, hand, giant star and cloud are closed independently of the background. No basket or narrow ground pocket remains."
+    },
+    {
+      "id": "starry-boat",
+      "sourceSha256": "47fe6b646218e76bd9d2b5f656f144a63f8bfbf59ee406b99f3e6f0d60654e66",
+      "regionCount": 5,
+      "minimumTouchDiameterDesign": 95.694,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Expressive boat hull and broad lower panel, one sail and one star all closed. Single black mast; five broad regions including the background intentionally simplify the scene."
+    },
+    {
+      "id": "starry-owl",
+      "sourceSha256": "e3e71ae5e6907e9d890c950c59ef06c52a36242f7eb5cda326ecd4d4d4d136e1",
+      "regionCount": 8,
+      "minimumTouchDiameterDesign": 45.671,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Owl body/wings, belly, both broad feet, crescent and broad branch separate from background. Branch spans the page and intentionally divides the background into two large areas."
+    },
+    {
+      "id": "starry-shooting",
+      "sourceSha256": "73ae54807af6e2c80a8b9ab23e08a40439140cc27e84f22c1d1d7d8fa332045e",
+      "regionCount": 9,
+      "minimumTouchDiameterDesign": 82.889,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Shooting star, both wide tails, wishing bear and broad foot areas are closed. No subject leaks into background; tiny contact highlight is reported separately by strict micro classification."
+    },
+    {
+      "id": "starry-telescope",
+      "sourceSha256": "9b08780dcb44ac32dc29486d207ee199bfc6ac2a0d7c6e0b60bf0e003d8dac2f",
+      "regionCount": 15,
+      "minimumTouchDiameterDesign": 57.505,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Rabbit, ear, tail, feet, telescope barrel/lens, broad support and moon/star are closed. The two background pockets around the stand are large and intentionally retained."
+    },
+    {
+      "id": "starry-castle",
+      "sourceSha256": "b0021c03c738786ffaa261a7c6027b14e7ecac586742de5a918a5ecda4f9af20",
+      "regionCount": 12,
+      "minimumTouchDiameterDesign": 83.941,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Two towers and central doorhouse, broad roofs, windows, door, cloud and star are separate closed areas. Solid-black doorknob does not create an extra tiny color region."
+    },
+    {
+      "id": "starry-fireflies",
+      "sourceSha256": "8bb7b63a50098508d44ed52f89d11b12fa74b55bed7bbc1ef517c482e6d014c7",
+      "regionCount": 9,
+      "minimumTouchDiameterDesign": 93.828,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Two head/body areas, lower abdomen areas, both broad wings and both leaves are closed. All six thin white arm/leg interiors removed; support is a solid black stroke. No subject merges into background."
+    },
+    {
+      "id": "starry-rainbow",
+      "sourceSha256": "dfef6fc961f10e6a639b11be18ae52d6af82982152ae26f362372c54b1a0c11d",
+      "regionCount": 9,
+      "minimumTouchDiameterDesign": 54.926,
+      "originalInspected": true,
+      "numberedPreviewInspected": true,
+      "manualDecision": "accept",
+      "notes": "Large smiling star, crescent, two clouds and broad rainbow-band components all closed. No cropped cloud, tiny bottom wedge or subject leak; third band is split by the central star into two substantial regions."
+    }
+  ]
+}

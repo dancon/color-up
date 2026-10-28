@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/starry-shooting.png",
+  "source_sha256": "73ae54807af6e2c80a8b9ab23e08a40439140cc27e84f22c1d1d7d8fa332045e",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions",
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 9,
+  "raw_region_count": 9,
+  "fixed_micro_detail_count": 1,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 15472,
+  "minimum_region_area_ratio": 0.00983901,
+  "minimum_touch_diameter_design": 82.889,
+  "ink_fraction": 0.066656,
+  "tonal_shading_fraction": 0.01406,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 51,
+  "gap_repair_fraction": 3.243e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 675961,
+      "area_ratio": 0.42985954,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1122
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        894.737
+      ],
+      "max_touch_diameter_design": 418.851,
+      "touch_center_design": [
+        790.271,
+        632.376
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 132050,
+      "area_ratio": 0.08397371,
+      "bbox_pixels": [
+        705,
+        46,
+        527,
+        499
+      ],
+      "bbox_design": [
+        562.201,
+        36.683,
+        420.255,
+        397.927
+      ],
+      "max_touch_diameter_design": 144.82,
+      "touch_center_design": [
+        778.309,
+        165.072
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 97231,
+      "area_ratio": 0.06183149,
+      "bbox_pixels": [
+        26,
+        85,
+        854,
+        245
+      ],
+      "bbox_design": [
+        20.734,
+        67.783,
+        681.021,
+        195.375
+      ],
+      "max_touch_diameter_design": 112.562,
+      "touch_center_design": [
+        117.225,
+        162.679
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 96798,
+      "area_ratio": 0.06155613,
+      "bbox_pixels": [
+        24,
+        208,
+        745,
+        304
+      ],
+      "bbox_design": [
+        19.139,
+        165.869,
+        594.099,
+        242.424
+      ],
+      "max_touch_diameter_design": 116.263,
+      "touch_center_design": [
+        128.389,
+        290.271
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 15472,
+      "area_ratio": 0.00983901,
+      "bbox_pixels": [
+        495,
+        402,
+        171,
+        153
+      ],
+      "bbox_design": [
+        394.737,
+        320.574,
+        136.364,
+        122.01
+      ],
+      "max_touch_diameter_design": 82.889,
+      "touch_center_design": [
+        478.469,
+        365.231
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 247018,
+      "area_ratio": 0.15708457,
+      "bbox_pixels": [
+        136,
+        476,
+        530,
+        730
+      ],
+      "bbox_design": [
+        108.453,
+        379.585,
+        422.648,
+        582.137
+      ],
+      "max_touch_diameter_design": 144.503,
+      "touch_center_design": [
+        312.6,
+        884.37
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 16987,
+      "area_ratio": 0.01080243,
+      "bbox_pixels": [
+        556,
+        752,
+        131,
+        205
+      ],
+      "bbox_design": [
+        443.381,
+        599.681,
+        104.466,
+        163.477
+      ],
+      "max_touch_diameter_design": 92.035,
+      "touch_center_design": [
+        501.595,
+        709.729
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 22360,
+      "area_ratio": 0.01421925,
+      "bbox_pixels": [
+        574,
+        1006,
+        161,
+        188
+      ],
+      "bbox_design": [
+        457.735,
+        802.233,
+        128.389,
+        149.92
+      ],
+      "max_touch_diameter_design": 108.874,
+      "touch_center_design": [
+        521.531,
+        880.383
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 163662,
+      "area_ratio": 0.10407652,
+      "bbox_pixels": [
+        0,
+        1042,
+        1254,
+        212
+      ],
+      "bbox_design": [
+        0.0,
+        830.941,
+        1000.0,
+        169.059
+      ],
+      "max_touch_diameter_design": 164.274,
+      "touch_center_design": [
+        661.882,
+        917.863
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    }
+  ],
+  "fixed_micro_details": [
+    {
+      "label": 10,
+      "area_pixels": 108,
+      "area_ratio": 6.868e-05,
+      "bbox_pixels": [
+        559,
+        1168,
+        15,
+        12
+      ],
+      "bbox_design": [
+        445.774,
+        931.419,
+        11.962,
+        9.569
+      ],
+      "max_touch_diameter_design": 7.133,
+      "touch_center_design": [
+        452.153,
+        936.204
+      ],
+      "touches_border": false,
+      "classification": "fixed_micro_detail",
+      "too_small": false
+    }
+  ],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-starry-shooting.regions.json"
+}

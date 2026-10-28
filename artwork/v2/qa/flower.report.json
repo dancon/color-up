@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/flower.png",
+  "source_sha256": "4691ac7b6db831c1efbcb4812e158b93cd83a5a4b985c0ba7f209ddca6287b8d",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 12,
+  "raw_region_count": 12,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 3834,
+  "minimum_region_area_ratio": 0.00243813,
+  "minimum_touch_diameter_design": 44.657,
+  "ink_fraction": 0.062117,
+  "tonal_shading_fraction": 0.013268,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 102,
+  "gap_repair_fraction": 6.486e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 901055,
+      "area_ratio": 0.57300212,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 326.642,
+      "touch_center_design": [
+        836.523,
+        836.523
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 52632,
+      "area_ratio": 0.03346993,
+      "bbox_pixels": [
+        652,
+        29,
+        290,
+        274
+      ],
+      "bbox_design": [
+        519.936,
+        23.126,
+        231.26,
+        218.501
+      ],
+      "max_touch_diameter_design": 156.373,
+      "touch_center_design": [
+        610.048,
+        101.276
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 59519,
+      "area_ratio": 0.03784954,
+      "bbox_pixels": [
+        353,
+        123,
+        318,
+        280
+      ],
+      "bbox_design": [
+        281.499,
+        98.086,
+        253.589,
+        223.285
+      ],
+      "max_touch_diameter_design": 184.022,
+      "touch_center_design": [
+        374.801,
+        208.134
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 82864,
+      "area_ratio": 0.05269517,
+      "bbox_pixels": [
+        559,
+        233,
+        363,
+        339
+      ],
+      "bbox_design": [
+        445.774,
+        185.805,
+        289.474,
+        270.335
+      ],
+      "max_touch_diameter_design": 132.616,
+      "touch_center_design": [
+        628.389,
+        262.36
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 52020,
+      "area_ratio": 0.03308074,
+      "bbox_pixels": [
+        903,
+        276,
+        241,
+        274
+      ],
+      "bbox_design": [
+        720.096,
+        220.096,
+        192.185,
+        218.501
+      ],
+      "max_touch_diameter_design": 170.139,
+      "touch_center_design": [
+        826.954,
+        326.156
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 41469,
+      "area_ratio": 0.02637111,
+      "bbox_pixels": [
+        397,
+        412,
+        271,
+        240
+      ],
+      "bbox_design": [
+        316.587,
+        328.549,
+        216.108,
+        191.388
+      ],
+      "max_touch_diameter_design": 155.025,
+      "touch_center_design": [
+        395.534,
+        434.609
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 3834,
+      "area_ratio": 0.00243813,
+      "bbox_pixels": [
+        675,
+        440,
+        84,
+        65
+      ],
+      "bbox_design": [
+        538.278,
+        350.877,
+        66.986,
+        51.834
+      ],
+      "max_touch_diameter_design": 44.941,
+      "touch_center_design": [
+        566.986,
+        377.99
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 51825,
+      "area_ratio": 0.03295674,
+      "bbox_pixels": [
+        677,
+        514,
+        314,
+        245
+      ],
+      "bbox_design": [
+        539.872,
+        409.888,
+        250.399,
+        195.375
+      ],
+      "max_touch_diameter_design": 162.625,
+      "touch_center_design": [
+        706.539,
+        518.341
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 61767,
+      "area_ratio": 0.03927909,
+      "bbox_pixels": [
+        138,
+        608,
+        351,
+        309
+      ],
+      "bbox_design": [
+        110.048,
+        484.848,
+        279.904,
+        246.411
+      ],
+      "max_touch_diameter_design": 113.339,
+      "touch_center_design": [
+        246.411,
+        614.833
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 13938,
+      "area_ratio": 0.0088635,
+      "bbox_pixels": [
+        487,
+        619,
+        152,
+        324
+      ],
+      "bbox_design": [
+        388.357,
+        493.62,
+        121.212,
+        258.373
+      ],
+      "max_touch_diameter_design": 44.657,
+      "touch_center_design": [
+        412.281,
+        722.488
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    },
+    {
+      "label": 11,
+      "area_pixels": 37277,
+      "area_ratio": 0.02370532,
+      "bbox_pixels": [
+        555,
+        766,
+        363,
+        156
+      ],
+      "bbox_design": [
+        442.584,
+        610.845,
+        289.474,
+        124.402
+      ],
+      "max_touch_diameter_design": 82.935,
+      "touch_center_design": [
+        611.643,
+        692.982
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 10
+    },
+    {
+      "label": 12,
+      "area_pixels": 116534,
+      "area_ratio": 0.07410672,
+      "bbox_pixels": [
+        277,
+        905,
+        469,
+        325
+      ],
+      "bbox_design": [
+        220.893,
+        721.691,
+        374.003,
+        259.171
+      ],
+      "max_touch_diameter_design": 221.691,
+      "touch_center_design": [
+        386.762,
+        869.219
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 11
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-flower.regions.json"
+}

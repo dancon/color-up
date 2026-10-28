@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/nature-rabbit.png",
+  "source_sha256": "2804aa5d6966c58408f495ef70401aefdc87aa11f3ce02dd0a7347996495256b",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 6,
+  "raw_region_count": 6,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 25330,
+  "minimum_region_area_ratio": 0.01610794,
+  "minimum_touch_diameter_design": 84.89,
+  "ink_fraction": 0.071089,
+  "tonal_shading_fraction": 0.014435,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 107,
+  "gap_repair_fraction": 6.804e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 769556,
+      "area_ratio": 0.4893788,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 319.286,
+      "touch_center_design": [
+        795.056,
+        159.49
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 57580,
+      "area_ratio": 0.03661648,
+      "bbox_pixels": [
+        346,
+        17,
+        444,
+        255
+      ],
+      "bbox_design": [
+        275.917,
+        13.557,
+        354.067,
+        203.349
+      ],
+      "max_touch_diameter_design": 112.256,
+      "touch_center_design": [
+        529.506,
+        90.909
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 410401,
+      "area_ratio": 0.26098367,
+      "bbox_pixels": [
+        25,
+        259,
+        908,
+        923
+      ],
+      "bbox_design": [
+        19.936,
+        206.539,
+        724.083,
+        736.045
+      ],
+      "max_touch_diameter_design": 213.93,
+      "touch_center_design": [
+        468.9,
+        661.882
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 163050,
+      "area_ratio": 0.10368734,
+      "bbox_pixels": [
+        848,
+        364,
+        368,
+        772
+      ],
+      "bbox_design": [
+        676.236,
+        290.271,
+        293.461,
+        615.63
+      ],
+      "max_touch_diameter_design": 227.462,
+      "touch_center_design": [
+        797.448,
+        706.539
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 34703,
+      "area_ratio": 0.02206846,
+      "bbox_pixels": [
+        683,
+        676,
+        267,
+        434
+      ],
+      "bbox_design": [
+        544.657,
+        539.075,
+        212.919,
+        346.093
+      ],
+      "max_touch_diameter_design": 92.724,
+      "touch_center_design": [
+        629.984,
+        641.946
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 25330,
+      "area_ratio": 0.01610794,
+      "bbox_pixels": [
+        306,
+        992,
+        337,
+        123
+      ],
+      "bbox_design": [
+        244.019,
+        791.069,
+        268.74,
+        98.086
+      ],
+      "max_touch_diameter_design": 84.89,
+      "touch_center_design": [
+        448.166,
+        835.726
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-nature-rabbit.regions.json"
+}

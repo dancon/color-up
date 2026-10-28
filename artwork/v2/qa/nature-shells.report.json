@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/nature-shells.png",
+  "source_sha256": "77571693e1ee6adffd59d6d8483f652071ed7e45d6bb4c6d92bf6e1b2c9dd5cc",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 9,
+  "raw_region_count": 9,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 13268,
+  "minimum_region_area_ratio": 0.00843743,
+  "minimum_touch_diameter_design": 77.677,
+  "ink_fraction": 0.067364,
+  "tonal_shading_fraction": 0.012177,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 62,
+  "gap_repair_fraction": 3.943e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 609872,
+      "area_ratio": 0.38783198,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 258.373,
+      "touch_center_design": [
+        870.813,
+        870.813
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 103888,
+      "area_ratio": 0.06606483,
+      "bbox_pixels": [
+        219,
+        87,
+        302,
+        602
+      ],
+      "bbox_design": [
+        174.641,
+        69.378,
+        240.829,
+        480.064
+      ],
+      "max_touch_diameter_design": 196.438,
+      "touch_center_design": [
+        316.587,
+        169.059
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 63521,
+      "area_ratio": 0.0403945,
+      "bbox_pixels": [
+        453,
+        126,
+        251,
+        562
+      ],
+      "bbox_design": [
+        361.244,
+        100.478,
+        200.159,
+        448.166
+      ],
+      "max_touch_diameter_design": 145.564,
+      "touch_center_design": [
+        487.241,
+        271.93
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 13268,
+      "area_ratio": 0.00843743,
+      "bbox_pixels": [
+        1037,
+        141,
+        181,
+        165
+      ],
+      "bbox_design": [
+        826.954,
+        112.44,
+        144.338,
+        131.579
+      ],
+      "max_touch_diameter_design": 77.677,
+      "touch_center_design": [
+        921.85,
+        154.705
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 89579,
+      "area_ratio": 0.0569654,
+      "bbox_pixels": [
+        49,
+        170,
+        315,
+        505
+      ],
+      "bbox_design": [
+        39.075,
+        135.566,
+        251.196,
+        402.711
+      ],
+      "max_touch_diameter_design": 192.877,
+      "touch_center_design": [
+        137.959,
+        265.55
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 68681,
+      "area_ratio": 0.04367587,
+      "bbox_pixels": [
+        902,
+        222,
+        333,
+        483
+      ],
+      "bbox_design": [
+        719.298,
+        177.033,
+        265.55,
+        385.167
+      ],
+      "max_touch_diameter_design": 120.423,
+      "touch_center_design": [
+        779.904,
+        247.209
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 166345,
+      "area_ratio": 0.10578271,
+      "bbox_pixels": [
+        697,
+        288,
+        514,
+        686
+      ],
+      "bbox_design": [
+        555.821,
+        229.665,
+        409.888,
+        547.049
+      ],
+      "max_touch_diameter_design": 239.128,
+      "touch_center_design": [
+        709.729,
+        442.584
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 37608,
+      "area_ratio": 0.02391581,
+      "bbox_pixels": [
+        22,
+        405,
+        221,
+        373
+      ],
+      "bbox_design": [
+        17.544,
+        322.967,
+        176.236,
+        297.448
+      ],
+      "max_touch_diameter_design": 111.072,
+      "touch_center_design": [
+        102.871,
+        470.494
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 313761,
+      "area_ratio": 0.19952802,
+      "bbox_pixels": [
+        194,
+        436,
+        867,
+        748
+      ],
+      "bbox_design": [
+        154.705,
+        347.687,
+        691.388,
+        596.491
+      ],
+      "max_touch_diameter_design": 189.585,
+      "touch_center_design": [
+        389.155,
+        759.171
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-nature-shells.regions.json"
+}

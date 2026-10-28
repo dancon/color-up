@@ -1,0 +1,766 @@
+[
+  {
+    "name": "草莓红",
+    "hex": "#FF5C5C",
+    "id": "solid-ffff5c5c",
+    "stops": []
+  },
+  {
+    "name": "番茄红",
+    "hex": "#E84A3F",
+    "id": "solid-ffe84a3f",
+    "stops": []
+  },
+  {
+    "name": "樱桃红",
+    "hex": "#C62828",
+    "id": "solid-ffc62828",
+    "stops": []
+  },
+  {
+    "name": "珊瑚红",
+    "hex": "#FF8E7A",
+    "id": "solid-ffff8e7a",
+    "stops": []
+  },
+  {
+    "name": "西瓜红",
+    "hex": "#FF6B81",
+    "id": "solid-ffff6b81",
+    "stops": []
+  },
+  {
+    "name": "玫瑰极光",
+    "hex": "#FF8FAB",
+    "id": "rainbow-01",
+    "stops": [
+      "#FF5C5C",
+      "#FF8FAB",
+      "#FFE9A8"
+    ]
+  },
+  {
+    "name": "玫瑰红",
+    "hex": "#D23C5A",
+    "id": "solid-ffd23c5a",
+    "stops": []
+  },
+  {
+    "name": "橘子橙",
+    "hex": "#FF9F45",
+    "id": "solid-ffff9f45",
+    "stops": []
+  },
+  {
+    "name": "南瓜橙",
+    "hex": "#E8782E",
+    "id": "solid-ffe8782e",
+    "stops": []
+  },
+  {
+    "name": "焦糖橙",
+    "hex": "#F2A65A",
+    "id": "solid-fff2a65a",
+    "stops": []
+  },
+  {
+    "name": "胡萝卜橙",
+    "hex": "#E86A2E",
+    "id": "solid-ffe86a2e",
+    "stops": []
+  },
+  {
+    "name": "落日鎏金",
+    "hex": "#FF6B6B",
+    "id": "rainbow-02",
+    "stops": [
+      "#FF9F45",
+      "#FF6B6B",
+      "#FFE66D"
+    ]
+  },
+  {
+    "name": "蜜橘橙",
+    "hex": "#FFB067",
+    "id": "solid-ffffb067",
+    "stops": []
+  },
+  {
+    "name": "落日橙",
+    "hex": "#F26B3A",
+    "id": "solid-fff26b3a",
+    "stops": []
+  },
+  {
+    "name": "柠檬黄",
+    "hex": "#FFD93D",
+    "id": "solid-ffffd93d",
+    "stops": []
+  },
+  {
+    "name": "奶油黄",
+    "hex": "#FFE9A8",
+    "id": "solid-ffffe9a8",
+    "stops": []
+  },
+  {
+    "name": "向日葵黄",
+    "hex": "#F5C518",
+    "id": "solid-fff5c518",
+    "stops": []
+  },
+  {
+    "name": "柠檬星糖",
+    "hex": "#C6E85B",
+    "id": "rainbow-03",
+    "stops": [
+      "#FFD93D",
+      "#C6E85B",
+      "#FF9F45"
+    ]
+  },
+  {
+    "name": "蛋黄黄",
+    "hex": "#FFC94D",
+    "id": "solid-ffffc94d",
+    "stops": []
+  },
+  {
+    "name": "蜜糖黄",
+    "hex": "#F2B705",
+    "id": "solid-fff2b705",
+    "stops": []
+  },
+  {
+    "name": "香槟黄",
+    "hex": "#EFD9A0",
+    "id": "solid-ffefd9a0",
+    "stops": []
+  },
+  {
+    "name": "青草绿",
+    "hex": "#6BCB77",
+    "id": "solid-ff6bcb77",
+    "stops": []
+  },
+  {
+    "name": "森林绿",
+    "hex": "#3E9B4F",
+    "id": "solid-ff3e9b4f",
+    "stops": []
+  },
+  {
+    "name": "青柠极光",
+    "hex": "#3ECFB2",
+    "id": "rainbow-04",
+    "stops": [
+      "#C6E85B",
+      "#3ECFB2",
+      "#4D96FF"
+    ]
+  },
+  {
+    "name": "抹茶绿",
+    "hex": "#B7D98C",
+    "id": "solid-ffb7d98c",
+    "stops": []
+  },
+  {
+    "name": "青柠绿",
+    "hex": "#C6E85B",
+    "id": "solid-ffc6e85b",
+    "stops": []
+  },
+  {
+    "name": "苹果绿",
+    "hex": "#8BC34A",
+    "id": "solid-ff8bc34a",
+    "stops": []
+  },
+  {
+    "name": "苔藓绿",
+    "hex": "#6B8E23",
+    "id": "solid-ff6b8e23",
+    "stops": []
+  },
+  {
+    "name": "薄荷绿",
+    "hex": "#3ECFB2",
+    "id": "solid-ff3ecfb2",
+    "stops": []
+  },
+  {
+    "name": "海盐极光",
+    "hex": "#BFE6F2",
+    "id": "rainbow-05",
+    "stops": [
+      "#3ECFB2",
+      "#BFE6F2",
+      "#9B7EDE"
+    ]
+  },
+  {
+    "name": "湖水青",
+    "hex": "#2BB7C7",
+    "id": "solid-ff2bb7c7",
+    "stops": []
+  },
+  {
+    "name": "孔雀蓝",
+    "hex": "#2E86AB",
+    "id": "solid-ff2e86ab",
+    "stops": []
+  },
+  {
+    "name": "湖水蓝",
+    "hex": "#56C7E8",
+    "id": "solid-ff56c7e8",
+    "stops": []
+  },
+  {
+    "name": "冰川蓝",
+    "hex": "#BFE6F2",
+    "id": "solid-ffbfe6f2",
+    "stops": []
+  },
+  {
+    "name": "海盐蓝",
+    "hex": "#7FD3D8",
+    "id": "solid-ff7fd3d8",
+    "stops": []
+  },
+  {
+    "name": "星河蓝",
+    "hex": "#BFE6F2",
+    "id": "rainbow-06",
+    "stops": [
+      "#3358D4",
+      "#4D96FF",
+      "#BFE6F2",
+      "#C4B5E8"
+    ]
+  },
+  {
+    "name": "天空蓝",
+    "hex": "#4D96FF",
+    "id": "solid-ff4d96ff",
+    "stops": []
+  },
+  {
+    "name": "深海蓝",
+    "hex": "#3358D4",
+    "id": "solid-ff3358d4",
+    "stops": []
+  },
+  {
+    "name": "藏青",
+    "hex": "#2A3F8F",
+    "id": "solid-ff2a3f8f",
+    "stops": []
+  },
+  {
+    "name": "牛仔蓝",
+    "hex": "#5B7DB1",
+    "id": "solid-ff5b7db1",
+    "stops": []
+  },
+  {
+    "name": "雾霾蓝",
+    "hex": "#8FB8D8",
+    "id": "solid-ff8fb8d8",
+    "stops": []
+  },
+  {
+    "name": "银河紫",
+    "hex": "#9B7EDE",
+    "id": "rainbow-07",
+    "stops": [
+      "#5D4A9E",
+      "#9B7EDE",
+      "#FF8FAB"
+    ]
+  },
+  {
+    "name": "宝石蓝",
+    "hex": "#1F5FBF",
+    "id": "solid-ff1f5fbf",
+    "stops": []
+  },
+  {
+    "name": "葡萄紫",
+    "hex": "#9B7EDE",
+    "id": "solid-ff9b7ede",
+    "stops": []
+  },
+  {
+    "name": "薰衣草紫",
+    "hex": "#C4B5E8",
+    "id": "solid-ffc4b5e8",
+    "stops": []
+  },
+  {
+    "name": "紫罗兰",
+    "hex": "#8E6FD8",
+    "id": "solid-ff8e6fd8",
+    "stops": []
+  },
+  {
+    "name": "香芋紫",
+    "hex": "#B79AC8",
+    "id": "solid-ffb79ac8",
+    "stops": []
+  },
+  {
+    "name": "樱花星光",
+    "hex": "#FFC2D1",
+    "id": "rainbow-08",
+    "stops": [
+      "#FF8FAB",
+      "#FFC2D1",
+      "#C4B5E8"
+    ]
+  },
+  {
+    "name": "星空紫",
+    "hex": "#5D4A9E",
+    "id": "solid-ff5d4a9e",
+    "stops": []
+  },
+  {
+    "name": "葡萄汽水",
+    "hex": "#7A5FCB",
+    "id": "solid-ff7a5fcb",
+    "stops": []
+  },
+  {
+    "name": "樱花粉",
+    "hex": "#FF8FAB",
+    "id": "solid-ffff8fab",
+    "stops": []
+  },
+  {
+    "name": "蜜桃粉",
+    "hex": "#FFB4A2",
+    "id": "solid-ffffb4a2",
+    "stops": []
+  },
+  {
+    "name": "玫瑰粉",
+    "hex": "#E86A8A",
+    "id": "solid-ffe86a8a",
+    "stops": []
+  },
+  {
+    "name": "紫罗兰极光",
+    "hex": "#C4B5E8",
+    "id": "rainbow-09",
+    "stops": [
+      "#8E6FD8",
+      "#C4B5E8",
+      "#FF8FAB"
+    ]
+  },
+  {
+    "name": "奶茶粉",
+    "hex": "#F2B5A7",
+    "id": "solid-fff2b5a7",
+    "stops": []
+  },
+  {
+    "name": "草莓奶昔",
+    "hex": "#FFC2D1",
+    "id": "solid-ffffc2d1",
+    "stops": []
+  },
+  {
+    "name": "豆沙红",
+    "hex": "#C9737A",
+    "id": "solid-ffc9737a",
+    "stops": []
+  },
+  {
+    "name": "可可棕",
+    "hex": "#B07D52",
+    "id": "solid-ffb07d52",
+    "stops": []
+  },
+  {
+    "name": "彩虹糖",
+    "hex": "#6BCB77",
+    "id": "rainbow-10",
+    "stops": [
+      "#FF5C5C",
+      "#FFD93D",
+      "#6BCB77",
+      "#4D96FF",
+      "#9B7EDE"
+    ]
+  },
+  {
+    "name": "极光绿",
+    "hex": "#3ECFB2",
+    "id": "rainbow-11",
+    "stops": [
+      "#6BCB77",
+      "#3ECFB2",
+      "#C6E85B"
+    ]
+  },
+  {
+    "name": "咖啡棕",
+    "hex": "#7A5233",
+    "id": "solid-ff7a5233",
+    "stops": []
+  },
+  {
+    "name": "焦糖色",
+    "hex": "#D9A066",
+    "id": "solid-ffd9a066",
+    "stops": []
+  },
+  {
+    "name": "栗子棕",
+    "hex": "#8B5A2B",
+    "id": "solid-ff8b5a2b",
+    "stops": []
+  },
+  {
+    "name": "巧克力棕",
+    "hex": "#5C3A21",
+    "id": "solid-ff5c3a21",
+    "stops": []
+  },
+  {
+    "name": "极光橙紫",
+    "hex": "#FF8FAB",
+    "id": "rainbow-12",
+    "stops": [
+      "#FF9F45",
+      "#FF8FAB",
+      "#9B7EDE"
+    ]
+  },
+  {
+    "name": "冰晶蓝",
+    "hex": "#8FB8D8",
+    "id": "rainbow-13",
+    "stops": [
+      "#BFE6F2",
+      "#8FB8D8",
+      "#4D96FF"
+    ]
+  },
+  {
+    "name": "肉桂棕",
+    "hex": "#A9714B",
+    "id": "solid-ffa9714b",
+    "stops": []
+  },
+  {
+    "name": "大象灰",
+    "hex": "#B9B4C2",
+    "id": "solid-ffb9b4c2",
+    "stops": []
+  },
+  {
+    "name": "石墨灰",
+    "hex": "#7C7A86",
+    "id": "solid-ff7c7a86",
+    "stops": []
+  },
+  {
+    "name": "月光灰",
+    "hex": "#D6D2DE",
+    "id": "solid-ffd6d2de",
+    "stops": []
+  },
+  {
+    "name": "星云粉",
+    "hex": "#E86A8A",
+    "id": "rainbow-14",
+    "stops": [
+      "#FF8FAB",
+      "#E86A8A",
+      "#9B7EDE"
+    ]
+  },
+  {
+    "name": "薄荷星河",
+    "hex": "#56C7E8",
+    "id": "rainbow-15",
+    "stops": [
+      "#3ECFB2",
+      "#C6E85B",
+      "#56C7E8",
+      "#FFE9A8"
+    ]
+  },
+  {
+    "name": "银灰",
+    "hex": "#A8A4B0",
+    "id": "solid-ffa8a4b0",
+    "stops": []
+  },
+  {
+    "name": "墨黑",
+    "hex": "#3D3A45",
+    "id": "solid-ff3d3a45",
+    "stops": []
+  },
+  {
+    "name": "雾灰",
+    "hex": "#8E8A96",
+    "id": "solid-ff8e8a96",
+    "stops": []
+  },
+  {
+    "name": "灰粉",
+    "hex": "#D8B4B4",
+    "id": "solid-ffd8b4b4",
+    "stops": []
+  },
+  {
+    "name": "金粉星河",
+    "hex": "#FFB4A2",
+    "id": "rainbow-16",
+    "stops": [
+      "#FFD93D",
+      "#FFB4A2",
+      "#FF8FAB"
+    ]
+  },
+  {
+    "name": "蓝莓极光",
+    "hex": "#4D96FF",
+    "id": "rainbow-17",
+    "stops": [
+      "#2A3F8F",
+      "#4D96FF",
+      "#C4B5E8"
+    ]
+  },
+  {
+    "name": "灰绿",
+    "hex": "#A8B5A2",
+    "id": "solid-ffa8b5a2",
+    "stops": []
+  },
+  {
+    "name": "灰蓝",
+    "hex": "#9AAABF",
+    "id": "solid-ff9aaabf",
+    "stops": []
+  },
+  {
+    "name": "灰紫",
+    "hex": "#A99BB5",
+    "id": "solid-ffa99bb5",
+    "stops": []
+  },
+  {
+    "name": "燕麦色",
+    "hex": "#D8C9B0",
+    "id": "solid-ffd8c9b0",
+    "stops": []
+  },
+  {
+    "name": "蜜桃极光",
+    "hex": "#FF8FAB",
+    "id": "rainbow-18",
+    "stops": [
+      "#FFB4A2",
+      "#FF8FAB",
+      "#FFE9A8"
+    ]
+  },
+  {
+    "name": "云霞极光",
+    "hex": "#E86A8A",
+    "id": "rainbow-19",
+    "stops": [
+      "#FFB4A2",
+      "#E86A8A",
+      "#8E6FD8"
+    ]
+  },
+  {
+    "name": "陶土色",
+    "hex": "#BD8B7B",
+    "id": "solid-ffbd8b7b",
+    "stops": []
+  },
+  {
+    "name": "天青",
+    "hex": "#6FC3DF",
+    "id": "solid-ff6fc3df",
+    "stops": []
+  },
+  {
+    "name": "碧蓝",
+    "hex": "#2E9CCA",
+    "id": "solid-ff2e9cca",
+    "stops": []
+  },
+  {
+    "name": "深海绿",
+    "hex": "#1F6F78",
+    "id": "solid-ff1f6f78",
+    "stops": []
+  },
+  {
+    "name": "青提星光",
+    "hex": "#B7D98C",
+    "id": "rainbow-20",
+    "stops": [
+      "#C6E85B",
+      "#B7D98C",
+      "#3ECFB2"
+    ]
+  },
+  {
+    "name": "深海极光",
+    "hex": "#56C7E8",
+    "id": "rainbow-21",
+    "stops": [
+      "#1F6F78",
+      "#2E86AB",
+      "#56C7E8",
+      "#C4B5E8"
+    ]
+  },
+  {
+    "name": "松石绿",
+    "hex": "#40B5AD",
+    "id": "solid-ff40b5ad",
+    "stops": []
+  },
+  {
+    "name": "薄荷冰",
+    "hex": "#D6F5EC",
+    "id": "solid-ffd6f5ec",
+    "stops": []
+  },
+  {
+    "name": "海浪蓝",
+    "hex": "#5AA9E6",
+    "id": "solid-ff5aa9e6",
+    "stops": []
+  },
+  {
+    "name": "杏色",
+    "hex": "#F5C8A8",
+    "id": "solid-fff5c8a8",
+    "stops": []
+  },
+  {
+    "name": "云朵极光",
+    "hex": "#BFE6F2",
+    "id": "rainbow-22",
+    "stops": [
+      "#D6D2DE",
+      "#BFE6F2",
+      "#FFC2D1"
+    ]
+  },
+  {
+    "name": "糖果极光",
+    "hex": "#3ECFB2",
+    "id": "rainbow-23",
+    "stops": [
+      "#FF5C5C",
+      "#FFD93D",
+      "#3ECFB2",
+      "#4D96FF",
+      "#9B7EDE"
+    ]
+  },
+  {
+    "name": "柠檬绿",
+    "hex": "#DFF280",
+    "id": "solid-ffdff280",
+    "stops": []
+  },
+  {
+    "name": "青提绿",
+    "hex": "#A8D672",
+    "id": "solid-ffa8d672",
+    "stops": []
+  },
+  {
+    "name": "薄荷奶绿",
+    "hex": "#CDEBDD",
+    "id": "solid-ffcdebdd",
+    "stops": []
+  },
+  {
+    "name": "玫瑰金",
+    "hex": "#B76E79",
+    "id": "solid-ffb76e79",
+    "stops": []
+  },
+  {
+    "name": "糖霜星河",
+    "hex": "#FFE9A8",
+    "id": "rainbow-24",
+    "stops": [
+      "#FFC2D1",
+      "#FFE9A8",
+      "#C4B5E8"
+    ]
+  },
+  {
+    "name": "翡翠极光",
+    "hex": "#3ECFB2",
+    "id": "rainbow-25",
+    "stops": [
+      "#3E9B4F",
+      "#3ECFB2",
+      "#C6E85B"
+    ]
+  },
+  {
+    "name": "亮金",
+    "hex": "#E5B93F",
+    "id": "solid-ffe5b93f",
+    "stops": []
+  },
+  {
+    "name": "铜棕",
+    "hex": "#B87333",
+    "id": "solid-ffb87333",
+    "stops": []
+  },
+  {
+    "name": "星光银",
+    "hex": "#C9CBD6",
+    "id": "solid-ffc9cbd6",
+    "stops": []
+  },
+  {
+    "name": "雾紫",
+    "hex": "#A79EAC",
+    "id": "solid-ffa79eac",
+    "stops": []
+  },
+  {
+    "name": "银河金粉",
+    "hex": "#FFD93D",
+    "id": "rainbow-26",
+    "stops": [
+      "#2A3F8F",
+      "#9B7EDE",
+      "#FFD93D",
+      "#FF8FAB"
+    ]
+  },
+  {
+    "name": "珍珠极光",
+    "hex": "#C4B5E8",
+    "id": "rainbow-27",
+    "stops": [
+      "#BFE6F2",
+      "#C4B5E8",
+      "#FFE9A8"
+    ]
+  }
+]

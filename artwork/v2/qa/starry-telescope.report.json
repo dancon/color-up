@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/starry-telescope.png",
+  "source_sha256": "9b08780dcb44ac32dc29486d207ee199bfc6ac2a0d7c6e0b60bf0e003d8dac2f",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 15,
+  "raw_region_count": 15,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 10619,
+  "minimum_region_area_ratio": 0.00675287,
+  "minimum_touch_diameter_design": 57.505,
+  "ink_fraction": 0.07347,
+  "tonal_shading_fraction": 0.01588,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 120,
+  "gap_repair_fraction": 7.631e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 629848,
+      "area_ratio": 0.40053519,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1171
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        933.812
+      ],
+      "max_touch_diameter_design": 250.399,
+      "touch_center_design": [
+        124.402,
+        124.402
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 43001,
+      "area_ratio": 0.02734535,
+      "bbox_pixels": [
+        699,
+        55,
+        289,
+        330
+      ],
+      "bbox_design": [
+        557.416,
+        43.86,
+        230.463,
+        263.158
+      ],
+      "max_touch_diameter_design": 106.989,
+      "touch_center_design": [
+        617.225,
+        212.919
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 42038,
+      "area_ratio": 0.02673296,
+      "bbox_pixels": [
+        389,
+        76,
+        184,
+        352
+      ],
+      "bbox_design": [
+        310.207,
+        60.606,
+        146.73,
+        280.702
+      ],
+      "max_touch_diameter_design": 119.862,
+      "touch_center_design": [
+        377.99,
+        156.3
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 10619,
+      "area_ratio": 0.00675287,
+      "bbox_pixels": [
+        1011,
+        98,
+        150,
+        149
+      ],
+      "bbox_design": [
+        806.22,
+        78.15,
+        119.617,
+        118.82
+      ],
+      "max_touch_diameter_design": 65.41,
+      "touch_center_design": [
+        866.826,
+        141.946
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 308197,
+      "area_ratio": 0.19598974,
+      "bbox_pixels": [
+        29,
+        316,
+        684,
+        883
+      ],
+      "bbox_design": [
+        23.126,
+        251.994,
+        545.455,
+        704.147
+      ],
+      "max_touch_diameter_design": 198.614,
+      "touch_center_design": [
+        208.134,
+        811.005
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 20766,
+      "area_ratio": 0.01320559,
+      "bbox_pixels": [
+        1107,
+        366,
+        117,
+        273
+      ],
+      "bbox_design": [
+        882.775,
+        291.866,
+        93.301,
+        217.703
+      ],
+      "max_touch_diameter_design": 74.705,
+      "touch_center_design": [
+        927.432,
+        394.737
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 105347,
+      "area_ratio": 0.06699264,
+      "bbox_pixels": [
+        640,
+        376,
+        541,
+        381
+      ],
+      "bbox_design": [
+        510.367,
+        299.841,
+        431.419,
+        303.828
+      ],
+      "max_touch_diameter_design": 201.803,
+      "touch_center_design": [
+        790.271,
+        451.356
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 11013,
+      "area_ratio": 0.00700343,
+      "bbox_pixels": [
+        823,
+        680,
+        119,
+        118
+      ],
+      "bbox_design": [
+        656.3,
+        542.265,
+        94.896,
+        94.099
+      ],
+      "max_touch_diameter_design": 93.175,
+      "touch_center_design": [
+        704.147,
+        588.517
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 61836,
+      "area_ratio": 0.03932297,
+      "bbox_pixels": [
+        488,
+        746,
+        340,
+        347
+      ],
+      "bbox_design": [
+        389.155,
+        594.896,
+        271.132,
+        276.715
+      ],
+      "max_touch_diameter_design": 154.836,
+      "touch_center_design": [
+        515.949,
+        783.094
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 30378,
+      "area_ratio": 0.01931809,
+      "bbox_pixels": [
+        891,
+        786,
+        177,
+        397
+      ],
+      "bbox_design": [
+        710.526,
+        626.794,
+        141.148,
+        316.587
+      ],
+      "max_touch_diameter_design": 75.079,
+      "touch_center_design": [
+        807.018,
+        905.104
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    },
+    {
+      "label": 11,
+      "area_pixels": 31359,
+      "area_ratio": 0.01994193,
+      "bbox_pixels": [
+        699,
+        791,
+        187,
+        392
+      ],
+      "bbox_design": [
+        557.416,
+        630.781,
+        149.123,
+        312.6
+      ],
+      "max_touch_diameter_design": 77.167,
+      "touch_center_design": [
+        602.871,
+        904.306
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 10
+    },
+    {
+      "label": 12,
+      "area_pixels": 12446,
+      "area_ratio": 0.0079147,
+      "bbox_pixels": [
+        832,
+        855,
+        108,
+        224
+      ],
+      "bbox_design": [
+        663.477,
+        681.818,
+        86.124,
+        178.628
+      ],
+      "max_touch_diameter_design": 68.506,
+      "touch_center_design": [
+        705.742,
+        823.764
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 11
+    },
+    {
+      "label": 13,
+      "area_pixels": 13563,
+      "area_ratio": 0.00862503,
+      "bbox_pixels": [
+        39,
+        902,
+        121,
+        184
+      ],
+      "bbox_design": [
+        31.1,
+        719.298,
+        96.491,
+        146.73
+      ],
+      "max_touch_diameter_design": 71.77,
+      "touch_center_design": [
+        66.188,
+        789.474
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 12
+    },
+    {
+      "label": 14,
+      "area_pixels": 12390,
+      "area_ratio": 0.00787909,
+      "bbox_pixels": [
+        414,
+        1018,
+        161,
+        156
+      ],
+      "bbox_design": [
+        330.144,
+        811.802,
+        128.389,
+        124.402
+      ],
+      "max_touch_diameter_design": 57.505,
+      "touch_center_design": [
+        412.281,
+        906.699
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 13
+    },
+    {
+      "label": 15,
+      "area_pixels": 124062,
+      "area_ratio": 0.07889395,
+      "bbox_pixels": [
+        0,
+        1082,
+        1254,
+        172
+      ],
+      "bbox_design": [
+        0.0,
+        862.839,
+        1000.0,
+        137.161
+      ],
+      "max_touch_diameter_design": 122.807,
+      "touch_center_design": [
+        705.742,
+        938.596
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 14
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-starry-telescope.regions.json"
+}

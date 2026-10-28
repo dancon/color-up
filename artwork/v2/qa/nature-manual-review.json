@@ -1,0 +1,59 @@
+{
+  "reviewer": "Codex visual inspection",
+  "items": [
+    {
+      "id": "cat",
+      "sourceSha256": "dde90b82d92a9aab543c5e18db2643da12ecf4a8ad794aa0b5e06d616f566ca8",
+      "regions": 14,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-rabbit",
+      "sourceSha256": "2804aa5d6966c58408f495ef70401aefdc87aa11f3ce02dd0a7347996495256b",
+      "regions": 6,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-deer",
+      "sourceSha256": "ae8fcde99e0976266546beb12858e08753a009a86d1fd7772cad0db405ee274f",
+      "regions": 11,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "fish",
+      "sourceSha256": "61aec330278c5b73d1a7ed8bc8fc9b9f58d7e0ffeaa4da51ca97c993dc3a697e",
+      "regions": 7,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "flower",
+      "sourceSha256": "4691ac7b6db831c1efbcb4812e158b93cd83a5a4b985c0ba7f209ddca6287b8d",
+      "regions": 12,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-butterfly",
+      "sourceSha256": "15f914d8f3b443de258506b7c90fbb325fe04fae9bf53aeec532296cd26bd492",
+      "regions": 11,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-sunflower",
+      "sourceSha256": "0760514abb8411c800cf9a93e4e727fade553357ad60d81e8bbcf6fd9746310e",
+      "regions": 13,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-penguin",
+      "sourceSha256": "a24d44db890f6a6dcf9aebeb23be815179602eb61837b9bf11b80c130d9e5c77",
+      "regions": 9,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    },
+    {
+      "id": "nature-shells",
+      "sourceSha256": "77571693e1ee6adffd59d6d8483f652071ed7e45d6bb4c6d92bf6e1b2c9dd5cc",
+      "regions": 9,
+      "review": "Original and numbered-mask overview manually inspected; subjects and props remain separate from background."
+    }
+  ]
+}

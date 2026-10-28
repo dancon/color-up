@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8585"/>
+      <stop offset="1" stop-color="#FF5C5C"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#iconBg)"/>
+  <g fill="#FFFFFF" opacity=".16">
+    <circle cx="74" cy="96" r="28"/>
+    <circle cx="448" cy="104" r="17"/>
+    <circle cx="430" cy="418" r="42"/>
+    <circle cx="86" cy="418" r="15"/>
+  </g>
+  <g transform="translate(256 262) scale(1.36) translate(-125 -125)">
+    <path d="M214 44 Q217 57 230 60 Q217 63 214 76 Q211 63 198 60 Q211 57 214 44 Z" fill="#FFD93D" stroke="#3D3A45" stroke-width="5" stroke-linejoin="round"/>
+    <g fill="none" stroke="#3D3A45" stroke-width="7" stroke-linecap="round">
+      <path d="M66 158 C52 155 44 146 42 137"/>
+      <path d="M106 206 C100 214 102 220 110 221 C118 222 122 218 122 210"/>
+      <path d="M144 206 C150 214 148 220 140 221 C132 222 128 218 128 210"/>
+    </g>
+    <path d="M125 30 C160 76 186 112 186 146 C186 184 158 210 125 210 C92 210 64 184 64 146 C64 112 90 76 125 30 Z" fill="#FFF8EC" stroke="#3D3A45" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M97 104 C101 86 110 69 120 55" fill="none" stroke="#FFD3DE" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="106" cy="148" rx="9" ry="12" fill="#3D3A45"/>
+    <ellipse cx="144" cy="148" rx="9" ry="12" fill="#3D3A45"/>
+    <circle cx="103" cy="144" r="3.2" fill="#FFFFFF"/>
+    <circle cx="141" cy="144" r="3.2" fill="#FFFFFF"/>
+    <ellipse cx="88" cy="166" rx="10" ry="5.5" fill="#FFB3C1"/>
+    <ellipse cx="162" cy="166" rx="10" ry="5.5" fill="#FFB3C1"/>
+    <path d="M107 170 Q125 184 143 170" fill="none" stroke="#3D3A45" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(202 151) rotate(20)">
+      <rect x="-11" y="-68" width="22" height="68" rx="8" fill="#FFD93D" stroke="#3D3A45" stroke-width="6"/>
+      <path d="M-11 -67 L0 -90 L11 -67 Z" fill="#FFB3C1" stroke="#3D3A45" stroke-width="6" stroke-linejoin="round"/>
+      <rect x="-11" y="-46" width="22" height="14" fill="#FFF8EC" stroke="#3D3A45" stroke-width="4"/>
+    </g>
+    <path d="M178 162 C188 160 195 156 199 152" fill="none" stroke="#3D3A45" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="201" cy="150" r="8" fill="#FFF8EC" stroke="#3D3A45" stroke-width="5"/>
+  </g>
+  <g stroke="#3D3A45" stroke-width="6">
+    <circle cx="108" cy="452" r="17" fill="#4D96FF"/>
+    <circle cx="156" cy="452" r="17" fill="#6BCB77"/>
+    <circle cx="204" cy="452" r="17" fill="#FFD93D"/>
+    <circle cx="252" cy="452" r="17" fill="#9B7EDE"/>
+  </g>
+</svg>

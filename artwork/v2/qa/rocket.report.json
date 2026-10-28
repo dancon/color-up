@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/rocket.png",
+  "source_sha256": "03215f68510c3d360a89a4dd8c7bb90a8e91f27881445a0bff3dacfff5270c31",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 10,
+  "raw_region_count": 10,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 26756,
+  "minimum_region_area_ratio": 0.01701477,
+  "minimum_touch_diameter_design": 71.486,
+  "ink_fraction": 0.056289,
+  "tonal_shading_fraction": 0.010534,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 36,
+  "gap_repair_fraction": 2.289e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 685630,
+      "area_ratio": 0.43600828,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1161
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        925.837
+      ],
+      "max_touch_diameter_design": 365.231,
+      "touch_center_design": [
+        181.818,
+        181.818
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 44490,
+      "area_ratio": 0.02829224,
+      "bbox_pixels": [
+        802,
+        43,
+        299,
+        241
+      ],
+      "bbox_design": [
+        639.553,
+        34.29,
+        238.437,
+        192.185
+      ],
+      "max_touch_diameter_design": 153.351,
+      "touch_center_design": [
+        795.853,
+        114.035
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 189166,
+      "area_ratio": 0.12029512,
+      "bbox_pixels": [
+        422,
+        127,
+        674,
+        719
+      ],
+      "bbox_design": [
+        336.523,
+        101.276,
+        537.48,
+        573.365
+      ],
+      "max_touch_diameter_design": 180.174,
+      "touch_center_design": [
+        582.935,
+        565.391
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 90598,
+      "area_ratio": 0.0576134,
+      "bbox_pixels": [
+        615,
+        240,
+        357,
+        353
+      ],
+      "bbox_design": [
+        490.431,
+        191.388,
+        284.689,
+        281.499
+      ],
+      "max_touch_diameter_design": 137.161,
+      "touch_center_design": [
+        671.451,
+        268.74
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 44480,
+      "area_ratio": 0.02828588,
+      "bbox_pixels": [
+        194,
+        397,
+        287,
+        309
+      ],
+      "bbox_design": [
+        154.705,
+        316.587,
+        228.868,
+        246.411
+      ],
+      "max_touch_diameter_design": 135.454,
+      "touch_center_design": [
+        268.74,
+        437.799
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 40237,
+      "area_ratio": 0.02558766,
+      "bbox_pixels": [
+        800,
+        634,
+        214,
+        361
+      ],
+      "bbox_design": [
+        637.959,
+        505.582,
+        170.654,
+        287.879
+      ],
+      "max_touch_diameter_design": 133.61,
+      "touch_center_design": [
+        728.868,
+        663.477
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 26756,
+      "area_ratio": 0.01701477,
+      "bbox_pixels": [
+        392,
+        676,
+        294,
+        231
+      ],
+      "bbox_design": [
+        312.6,
+        539.075,
+        234.45,
+        184.211
+      ],
+      "max_touch_diameter_design": 71.486,
+      "touch_center_design": [
+        447.368,
+        627.592
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 48140,
+      "area_ratio": 0.03061336,
+      "bbox_pixels": [
+        257,
+        760,
+        252,
+        316
+      ],
+      "bbox_design": [
+        204.944,
+        606.061,
+        200.957,
+        251.994
+      ],
+      "max_touch_diameter_design": 148.702,
+      "touch_center_design": [
+        295.853,
+        708.931
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 40423,
+      "area_ratio": 0.02570594,
+      "bbox_pixels": [
+        398,
+        827,
+        225,
+        332
+      ],
+      "bbox_design": [
+        317.384,
+        659.49,
+        179.426,
+        264.753
+      ],
+      "max_touch_diameter_design": 123.055,
+      "touch_center_design": [
+        420.255,
+        782.297
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 274045,
+      "area_ratio": 0.17427168,
+      "bbox_pixels": [
+        0,
+        927,
+        1254,
+        327
+      ],
+      "bbox_design": [
+        0.0,
+        739.234,
+        1000.0,
+        260.766
+      ],
+      "max_touch_diameter_design": 225.648,
+      "touch_center_design": [
+        569.378,
+        886.762
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-rocket.regions.json"
+}

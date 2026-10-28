@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/nature-deer.png",
+  "source_sha256": "ae8fcde99e0976266546beb12858e08753a009a86d1fd7772cad0db405ee274f",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 11,
+  "raw_region_count": 11,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 17789,
+  "minimum_region_area_ratio": 0.01131244,
+  "minimum_touch_diameter_design": 62.852,
+  "ink_fraction": 0.071015,
+  "tonal_shading_fraction": 0.015258,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 135,
+  "gap_repair_fraction": 8.585e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 865291,
+      "area_ratio": 0.55025895,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 315.503,
+      "touch_center_design": [
+        813.397,
+        157.097
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 142509,
+      "area_ratio": 0.09062483,
+      "bbox_pixels": [
+        499,
+        24,
+        446,
+        710
+      ],
+      "bbox_design": [
+        397.927,
+        19.139,
+        355.662,
+        566.188
+      ],
+      "max_touch_diameter_design": 146.73,
+      "touch_center_design": [
+        679.426,
+        389.952
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 29891,
+      "area_ratio": 0.01900839,
+      "bbox_pixels": [
+        532,
+        61,
+        155,
+        292
+      ],
+      "bbox_design": [
+        424.242,
+        48.644,
+        123.604,
+        232.855
+      ],
+      "max_touch_diameter_design": 119.915,
+      "touch_center_design": [
+        484.848,
+        168.262
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 31563,
+      "area_ratio": 0.02007166,
+      "bbox_pixels": [
+        61,
+        181,
+        202,
+        254
+      ],
+      "bbox_design": [
+        48.644,
+        144.338,
+        161.085,
+        202.552
+      ],
+      "max_touch_diameter_design": 123.128,
+      "touch_center_design": [
+        136.364,
+        250.399
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 196705,
+      "area_ratio": 0.12508935,
+      "bbox_pixels": [
+        56,
+        355,
+        531,
+        722
+      ],
+      "bbox_design": [
+        44.657,
+        283.094,
+        423.445,
+        575.758
+      ],
+      "max_touch_diameter_design": 172.551,
+      "touch_center_design": [
+        278.309,
+        378.788
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 23836,
+      "area_ratio": 0.01515787,
+      "bbox_pixels": [
+        938,
+        403,
+        285,
+        231
+      ],
+      "bbox_design": [
+        748.006,
+        321.372,
+        227.273,
+        184.211
+      ],
+      "max_touch_diameter_design": 62.852,
+      "touch_center_design": [
+        789.474,
+        367.624
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 21089,
+      "area_ratio": 0.01341099,
+      "bbox_pixels": [
+        948,
+        455,
+        237,
+        146
+      ],
+      "bbox_design": [
+        755.981,
+        362.839,
+        188.995,
+        116.427
+      ],
+      "max_touch_diameter_design": 92.998,
+      "touch_center_design": [
+        855.662,
+        423.445
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 17889,
+      "area_ratio": 0.01137604,
+      "bbox_pixels": [
+        481,
+        616,
+        134,
+        212
+      ],
+      "bbox_design": [
+        383.573,
+        491.228,
+        106.858,
+        169.059
+      ],
+      "max_touch_diameter_design": 86.257,
+      "touch_center_design": [
+        440.989,
+        576.555
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 25064,
+      "area_ratio": 0.01593879,
+      "bbox_pixels": [
+        533,
+        753,
+        242,
+        268
+      ],
+      "bbox_design": [
+        425.04,
+        600.478,
+        192.982,
+        213.716
+      ],
+      "max_touch_diameter_design": 79.633,
+      "touch_center_design": [
+        551.834,
+        771.93
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    },
+    {
+      "label": 10,
+      "area_pixels": 17789,
+      "area_ratio": 0.01131244,
+      "bbox_pixels": [
+        279,
+        769,
+        141,
+        240
+      ],
+      "bbox_design": [
+        222.488,
+        613.238,
+        112.44,
+        191.388
+      ],
+      "max_touch_diameter_design": 71.628,
+      "touch_center_design": [
+        289.474,
+        767.145
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 9
+    },
+    {
+      "label": 11,
+      "area_pixels": 89083,
+      "area_ratio": 0.05664998,
+      "bbox_pixels": [
+        682,
+        912,
+        493,
+        318
+      ],
+      "bbox_design": [
+        543.86,
+        727.273,
+        393.142,
+        253.589
+      ],
+      "max_touch_diameter_design": 138.756,
+      "touch_center_design": [
+        720.893,
+        877.193
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 10
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-nature-deer.regions.json"
+}

@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/space-dog.png",
+  "source_sha256": "b4d90f3782c611c7f8b462543523d1529b5e33c6afd181fd28bf578199cec0a2",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions",
+    "multiple_border_regions_check_for_cropped_objects"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 9,
+  "raw_region_count": 10,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 9852,
+  "minimum_region_area_ratio": 0.00626512,
+  "minimum_touch_diameter_design": 55.639,
+  "ink_fraction": 0.066997,
+  "tonal_shading_fraction": 0.018124,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 181,
+  "gap_repair_fraction": 0.0001151,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 689195,
+      "area_ratio": 0.43827535,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1215
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        968.9
+      ],
+      "max_touch_diameter_design": 232.855,
+      "touch_center_design": [
+        883.573,
+        115.63
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 148974,
+      "area_ratio": 0.09473608,
+      "bbox_pixels": [
+        219,
+        15,
+        779,
+        588
+      ],
+      "bbox_design": [
+        174.641,
+        11.962,
+        621.212,
+        468.9
+      ],
+      "max_touch_diameter_design": 132.059,
+      "touch_center_design": [
+        653.907,
+        125.997
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 176727,
+      "area_ratio": 0.11238487,
+      "bbox_pixels": [
+        251,
+        159,
+        689,
+        405
+      ],
+      "bbox_design": [
+        200.159,
+        126.794,
+        549.442,
+        322.967
+      ],
+      "max_touch_diameter_design": 136.268,
+      "touch_center_design": [
+        268.74,
+        275.917
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 173689,
+      "area_ratio": 0.11045293,
+      "bbox_pixels": [
+        152,
+        500,
+        996,
+        346
+      ],
+      "bbox_design": [
+        121.212,
+        398.724,
+        794.258,
+        275.917
+      ],
+      "max_touch_diameter_design": 171.219,
+      "touch_center_design": [
+        802.233,
+        547.049
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 32135,
+      "area_ratio": 0.0204354,
+      "bbox_pixels": [
+        364,
+        534,
+        327,
+        185
+      ],
+      "bbox_design": [
+        290.271,
+        425.837,
+        260.766,
+        147.528
+      ],
+      "max_touch_diameter_design": 90.348,
+      "touch_center_design": [
+        381.978,
+        500.0
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    },
+    {
+      "label": 6,
+      "area_pixels": 15036,
+      "area_ratio": 0.00956175,
+      "bbox_pixels": [
+        668,
+        595,
+        158,
+        137
+      ],
+      "bbox_design": [
+        532.695,
+        474.482,
+        125.997,
+        109.25
+      ],
+      "max_touch_diameter_design": 81.402,
+      "touch_center_design": [
+        599.681,
+        515.152
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 5
+    },
+    {
+      "label": 7,
+      "area_pixels": 89712,
+      "area_ratio": 0.05704998,
+      "bbox_pixels": [
+        386,
+        786,
+        598,
+        281
+      ],
+      "bbox_design": [
+        307.815,
+        626.794,
+        476.874,
+        224.083
+      ],
+      "max_touch_diameter_design": 121.254,
+      "touch_center_design": [
+        391.547,
+        700.159
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 6
+    },
+    {
+      "label": 8,
+      "area_pixels": 9852,
+      "area_ratio": 0.00626512,
+      "bbox_pixels": [
+        228,
+        842,
+        175,
+        111
+      ],
+      "bbox_design": [
+        181.818,
+        671.451,
+        139.553,
+        88.517
+      ],
+      "max_touch_diameter_design": 55.639,
+      "touch_center_design": [
+        285.486,
+        720.893
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 7
+    },
+    {
+      "label": 9,
+      "area_pixels": 131661,
+      "area_ratio": 0.08372633,
+      "bbox_pixels": [
+        0,
+        1119,
+        1254,
+        135
+      ],
+      "bbox_design": [
+        0.0,
+        892.344,
+        1000.0,
+        107.656
+      ],
+      "max_touch_diameter_design": 108.453,
+      "touch_center_design": [
+        500.797,
+        945.774
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 8
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-space-dog.regions.json"
+}

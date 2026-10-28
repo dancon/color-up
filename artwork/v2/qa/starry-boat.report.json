@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "source": "/Users/bytedance/workspace/github/color-up/artwork/v2/source/starry-boat.png",
+  "source_sha256": "47fe6b646218e76bd9d2b5f656f144a63f8bfbf59ee406b99f3e6f0d60654e66",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "status": "pass",
+  "rejection_reasons": [],
+  "warnings": [
+    "outside_preferred_10_to_16_regions"
+  ],
+  "settings": {
+    "threshold": 160,
+    "close_kernel": 3,
+    "max_regions": 20,
+    "target_min": 10,
+    "target_max": 16,
+    "min_area_ratio": 0.0008,
+    "min_touch_diameter": 44,
+    "contour_error": 0.5,
+    "micro_max_area_ratio": 0.00015,
+    "micro_max_diameter": 16.0,
+    "micro_max_extent": 26.0,
+    "max_micro_details": 12
+  },
+  "region_count": 5,
+  "raw_region_count": 5,
+  "fixed_micro_detail_count": 0,
+  "small_substantive_region_count": 0,
+  "minimum_region_area_pixels": 43394,
+  "minimum_region_area_ratio": 0.02759527,
+  "minimum_touch_diameter_design": 95.694,
+  "ink_fraction": 0.080285,
+  "tonal_shading_fraction": 0.010091,
+  "colored_fraction": 0.0,
+  "gap_repair_added_pixels": 21,
+  "gap_repair_fraction": 1.335e-05,
+  "regions": [
+    {
+      "label": 1,
+      "area_pixels": 903373,
+      "area_ratio": 0.57447619,
+      "bbox_pixels": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "bbox_design": [
+        0.0,
+        0.0,
+        1000.0,
+        1000.0
+      ],
+      "max_touch_diameter_design": 395.267,
+      "touch_center_design": [
+        638.756,
+        462.52
+      ],
+      "touches_border": true,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 0
+    },
+    {
+      "label": 2,
+      "area_pixels": 43394,
+      "area_ratio": 0.02759527,
+      "bbox_pixels": [
+        891,
+        68,
+        304,
+        292
+      ],
+      "bbox_design": [
+        710.526,
+        54.226,
+        242.424,
+        232.855
+      ],
+      "max_touch_diameter_design": 134.009,
+      "touch_center_design": [
+        831.738,
+        181.021
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 1
+    },
+    {
+      "label": 3,
+      "area_pixels": 202561,
+      "area_ratio": 0.12881332,
+      "bbox_pixels": [
+        37,
+        93,
+        473,
+        714
+      ],
+      "bbox_design": [
+        29.506,
+        74.163,
+        377.193,
+        569.378
+      ],
+      "max_touch_diameter_design": 309.41,
+      "touch_center_design": [
+        251.196,
+        436.204
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 2
+    },
+    {
+      "label": 4,
+      "area_pixels": 213491,
+      "area_ratio": 0.13576396,
+      "bbox_pixels": [
+        98,
+        709,
+        1121,
+        378
+      ],
+      "bbox_design": [
+        78.15,
+        565.391,
+        893.939,
+        301.435
+      ],
+      "max_touch_diameter_design": 175.62,
+      "touch_center_design": [
+        743.222,
+        743.222
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 3
+    },
+    {
+      "label": 5,
+      "area_pixels": 83427,
+      "area_ratio": 0.0530532,
+      "bbox_pixels": [
+        180,
+        1023,
+        857,
+        195
+      ],
+      "bbox_design": [
+        143.541,
+        815.789,
+        683.413,
+        155.502
+      ],
+      "max_touch_diameter_design": 95.694,
+      "touch_center_design": [
+        431.419,
+        921.053
+      ],
+      "touches_border": false,
+      "classification": "region",
+      "too_small": false,
+      "region_index": 4
+    }
+  ],
+  "fixed_micro_details": [],
+  "note": "Counts do not certify composition or character design; inspect original artwork visually. No regions were truncated.",
+  "geometry_export": "/Users/bytedance/workspace/github/color-up/artwork/v2/regions/art2-starry-boat.regions.json"
+}
